@@ -1,7 +1,11 @@
 ---
 title: "My First Hugo Post"
 date: 2021-06-05T17:32:15+09:00
-draft: true
+tags: ["Hugo", "Blog", "教程"]
+categories: ["教程"]
+toc:
+  enable: true
+  auto: true
 ---
 
 ……卧槽竟然用 `hugo` 这么简单这么快喵喵喵！而且主题那么多选择毫不费力喵！
