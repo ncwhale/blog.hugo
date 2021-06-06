@@ -14,13 +14,18 @@ toc:
 
 直接复制这些代码就行了喵……保证不超过1分钟就能开始写字喵……
 
-```PowerShell
+```PowerShell {linenos=table,hl_lines=["6-10"],linenostart=1}
 scoop install hugo-extended
 hugo new site blog.hugo
 cd blog.hugo
 git init
+
+# 注意，如果您想用 Cloudflare Pages 进行 CI 部署，则这里需要用 Subtree 方式替代，否则会出错喵~
 git submodule add https://github.com/upagge/uBlogger.git themes/uBlogger
-echo 'theme = "uBlogger"'>>.\config.toml #注意，这里可能被 Windows 环境坑掉，您可能需要手动编辑 config.toml 喵~
+
+#注意，这里可能被 Windows 环境坑掉，您可能需要手动编辑 config.toml 喵~
+echo 'theme = "uBlogger"'>>.\config.toml 
+
 hugo new posts/my-first-post.md
 hugo server -D
 code .

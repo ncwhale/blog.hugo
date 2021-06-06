@@ -59,6 +59,16 @@ theme = "uBlogger"
   [markup.highlight]
     # false is a necessary configuration
     noClasses = false
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    style = "fruity"
+    tabWidth = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
