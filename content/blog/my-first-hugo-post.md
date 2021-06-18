@@ -47,3 +47,7 @@ scoop install git vscode-portable hugo-extended
 * ~~主题配置 （参考自己选择的主题的相关文档进行，我这里选用了 [uBlogger](https://ublogger.netlify.app/) (似乎代码高亮还有点问题喵……~~
 * 主题配置 （参考自己选择的主题的相关文档进行，我这里选用了 [Mainroad](https://github.com/Vimux/Mainroad/) 
 * 代码高亮主要需要参考 [Syntax Highlighting | HUGO](https://gohugo.io/content-management/syntax-highlighting/) 文档重新配置喵
+
+## 接下来……
+
+之前用 WordPress/Ghost 等工具写的博客，要找个方式导入了喵~ 大概又是一项大工程喵？
