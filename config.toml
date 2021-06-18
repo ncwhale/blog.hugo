@@ -2,50 +2,91 @@ baseURL = "https://koa.im/"
 languageCode = "zh-cn"
 title = "Kouga's Blog"
 # theme = "uBlogger"
-theme = [ "m10c"]
+theme = [ "mainroad" ]
 paginate = 10
-
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "dracula"
-pygmentsUseClasses = true
+pygmentsUseClasses = false
 
-[params]
-  # uBlogger theme version
-  version = "2.0.X"
-  author = "Whale Mo"
+[Author] # Used in authorbox
+  name = "Whale Mo"
+  bio = "Nyan?"
+  avatar = "img/avatar.png"
+
+[Params]
+  copyright = "Whale Mo"
   description = "A simple blog for some idea or fun."
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = true # Enable Twitter Cards if true
   menu_item_separator = " - "
-  [[params.social]]
-    icon = "github"
-    name = "Github"
-    url = "https://github.com/ncwhale"
-  [[params.social]]
-    icon = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/Kouga_"
+  authorbox = true # Show authorbox at bottom of pages if true
+  toc = true # Enable Table of Contents
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
+  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+  mathjax = true # Enable MathJax
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
+  # customCSS = [ "css/syntax.css" ] # Include custom CSS files
+  # customJS = [] # Include custom JS files
+[Params.style.vars]
+  highlightColor = "#e22d30" # Override highlight color
 
-[params.search]
-  enable = true
-  # type of search engine ("lunr", "algolia")
-  type = "lunr"
-  # max index length of the chunked content
-  contentLength = 1200
-  # placeholder of the search bar
-  placeholder = ""
-  # uBlogger NEW | 0.2.1 max number of results length
-  maxResultLength = 10
-  # uBlogger NEW | 0.2.3 snippet length of the result
-  snippetLength = 30
-  # uBlogger NEW | 0.2.1 HTML tag name of the highlight part in results
-  highlightTag = "em"
-  # uBlogger NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
-  absoluteURL = false
+  # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
+  # Take care of different quotes OR escaping symbols in these params if necessary
+  # fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
+  # fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
-    [params.page.library]
-      [params.page.library.css]
-        syntax = "syntax.css"
+[Params.logo]
+  image = "img/placeholder.png" # Logo image. Path relative to "static"
+  # title = "" # Logo title, otherwise will use site title
+  subtitle = "A simple blog for some idea or fun." # Logo subtitle
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+  # alternatively "ddg-search" can be used, to search via DuckDuckGo
+  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  categories_counter = true # Enable counter for each category in "Categories" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  # facebook = "username"
+  twitter = "Kouga_"
+  # instagram = "username"
+  # linkedin = "username"
+  # telegram = "username"
+  github = "ncwhale"
+  # gitlab = "username"
+  # bitbucket = "username"
+  # email = "example@example.com"
+
+# Custom social links
+# [[Params.widgets.social.custom]]
+#   title = "Youtube"
+#   url = "https://youtube.com/user/username"
+#   icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
+
+# [[Params.widgets.social.custom]]
+#   title = "My Home Page"
+#   url = "https://koa.im"
+
+    # [params.page.library]
+    #   [params.page.library.css]
+    #     syntax = "syntax.css"
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -78,18 +119,19 @@ pygmentsUseClasses = true
 # Markup related configuration in Hugo
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  # [markup.highlight]
+  [markup.highlight]
   #   noClasses = false
   #   # anchorLineNos = false
-  #   codeFences = true
-  #   guessSyntax = true
+  codeFences = true
+  guessSyntax = true
   #   # hl_Lines = ""
   #   # lineAnchors = ""
   #   lineNoStart = 1
   #   lineNos = true
-  #   lineNumbersInTable = true
-  #   style = "dracula"
-  #   tabWidth = 2
+  lineNumbersInTable = true
+  style = "dracula"
+  tabWidth = 2
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
+  # home = ["HTML", "RSS", "JSON"]

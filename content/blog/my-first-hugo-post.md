@@ -26,12 +26,12 @@ git submodule add "https://github.com/upagge/uBlogger.git" themes/uBlogger
 #注意，这里可能被 Windows 环境坑掉，您可能需要手动编辑 config.toml 喵~
 echo 'theme = "uBlogger"'>>.\config.toml 
 
-hugo new posts/my-first-post.md
+hugo new blog/my-first-hugo-post.md
 hugo server -D
 code .
 ```
 
-好了现在 vscode 里应该就直接能写字了喵！就像这篇一样喵！超级不折腾喵！点开 [my-first-post](http://localhost:1313/posts/my-first-hugo-post/) 就能看到 Hotreload 效果的预览喵！
+好了现在 vscode 里应该就直接能写字了喵！就像这篇一样喵！超级不折腾喵！点开 [my-first-hugo-post](http://localhost:1313/blog/my-first-hugo-post/) 就能看到 Hotreload 效果的预览喵！
 
 备注：如果没有安装 scoop git 和 vscode 的话，建议先 [安装 scoop](https://scoop.sh/) 然后使用 `scoop` 一键安装提及软件包喵：
 
@@ -44,4 +44,6 @@ scoop install git vscode-portable hugo-extended
 ## 稍微配置一下
 
 * 部署CI（比如用 [Cloudflare Page](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site) 就行了喵！
-* 主题配置 （参考自己选择的主题的相关文档进行，我这里选用了 [uBlogger](https://ublogger.netlify.app/) (似乎代码高亮还有点问题喵……
+* ~~主题配置 （参考自己选择的主题的相关文档进行，我这里选用了 [uBlogger](https://ublogger.netlify.app/) (似乎代码高亮还有点问题喵……~~
+* 主题配置 （参考自己选择的主题的相关文档进行，我这里选用了 [Mainroad](https://github.com/Vimux/Mainroad/) 
+* 代码高亮主要需要参考 [Syntax Highlighting | HUGO](https://gohugo.io/content-management/syntax-highlighting/) 文档重新配置喵
