@@ -2,7 +2,7 @@ baseURL = "https://koa.im/"
 languageCode = "zh-cn"
 title = "Kouga's Blog"
 # theme = "uBlogger"
-theme = [ "mainroad" ]
+theme = [ "Mainroad" ]
 paginate = 10
 
 pygmentsCodefences = true
