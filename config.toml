@@ -36,7 +36,7 @@ pygmentsUseClasses = false
   # customCSS = [ "css/syntax.css" ] # Include custom CSS files
   # customJS = [] # Include custom JS files
 [Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
+  highlightColor = "#CB4042" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
@@ -44,7 +44,7 @@ pygmentsUseClasses = false
   # fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
-  image = "img/placeholder.png" # Logo image. Path relative to "static"
+  # image = "img/placeholder.png" # Logo image. Path relative to "static"
   # title = "" # Logo title, otherwise will use site title
   subtitle = "A simple blog for some idea or fun." # Logo subtitle
 
