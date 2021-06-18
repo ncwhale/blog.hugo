@@ -1,11 +1,30 @@
 baseURL = "https://koa.im/"
 languageCode = "zh-cn"
 title = "Kouga's Blog"
-theme = "uBlogger"
+# theme = "uBlogger"
+theme = [ "m10c"]
+paginate = 10
+
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "dracula"
+pygmentsUseClasses = true
 
 [params]
   # uBlogger theme version
   version = "2.0.X"
+  author = "Whale Mo"
+  description = "A simple blog for some idea or fun."
+  menu_item_separator = " - "
+  [[params.social]]
+    icon = "github"
+    name = "Github"
+    url = "https://github.com/ncwhale"
+  [[params.social]]
+    icon = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/Kouga_"
 
 [params.search]
   enable = true
@@ -24,6 +43,9 @@ theme = "uBlogger"
   # uBlogger NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
   absoluteURL = false
 
+    [params.page.library]
+      [params.page.library.css]
+        syntax = "syntax.css"
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -31,7 +53,7 @@ theme = "uBlogger"
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Archives"
+    name = "Blog"
     url = "/blog/"
     # title will be shown when you hover on this menu link
     title = ""
@@ -56,19 +78,18 @@ theme = "uBlogger"
 # Markup related configuration in Hugo
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false is a necessary configuration
-    noClasses = false
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineAnchors = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    style = "fruity"
-    tabWidth = 4
+  # [markup.highlight]
+  #   noClasses = false
+  #   # anchorLineNos = false
+  #   codeFences = true
+  #   guessSyntax = true
+  #   # hl_Lines = ""
+  #   # lineAnchors = ""
+  #   lineNoStart = 1
+  #   lineNos = true
+  #   lineNumbersInTable = true
+  #   style = "dracula"
+  #   tabWidth = 2
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
