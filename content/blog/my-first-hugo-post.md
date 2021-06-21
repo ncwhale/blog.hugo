@@ -3,6 +3,7 @@ title: "My First Hugo Post"
 date: 2021-06-05T17:32:15+09:00
 tags: ["Hugo", "Blog", "教程", "scoop"]
 categories: ["教程"]
+isCJKLanguage: true
 toc:
   enable: true
   auto: true

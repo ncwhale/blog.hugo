@@ -4,11 +4,15 @@ date: 2021-06-21T15:51:08+09:00
 tags: ["rabbitmq", "WSL", "教程"]
 categories: ["教程"]
 toc: true
+isCJKLanguage: true
 ---
 
 ## 首先，把兔子抓过来
 
-基于 RabbitMQ 官方的[安装步骤](https://www.rabbitmq.com/install-debian.html#apt-quick-start-cloudsmith) 使用了 `Cloudsmith Quick Start Script` 在 `Ubuntu 20.04 @ WSL2` 里进行安装：
+基于 RabbitMQ 官方的[安装步骤](https://www.rabbitmq.com/install-debian.html#apt-quick-start-cloudsmith) 
+
+使用其中 `Cloudsmith Quick Start Script` 小节的指令在 `Ubuntu 20.04 @ WSL2` 里进行安装：
+
 
 ```sh
 #!/bin/sh
