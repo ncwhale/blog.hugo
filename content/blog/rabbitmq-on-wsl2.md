@@ -1,6 +1,8 @@
 ---
 title: "Rabbitmq on Wsl2"
 date: 2021-06-21T15:51:08+09:00
+tags: ["rabbitmq", "WSL", "教程"]
+categories: ["教程"]
 toc: true
 ---
 
