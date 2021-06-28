@@ -1,9 +1,10 @@
 baseURL = "https://koa.im/"
 languageCode = "zh-cn"
 title = "Kouga's Blog"
-# theme = "uBlogger"
 theme = [ "Mainroad" ]
 paginate = 10
+
+disqusShortname = "kougas-blog" # Enable comments by entering your Disqus shortname
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
