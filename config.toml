@@ -135,6 +135,10 @@ pygmentsUseClasses = false
   style = "dracula"
   tabWidth = 2
 
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [outputs]
   home = ["HTML", "RSS"]
   # home = ["HTML", "RSS", "JSON"]
