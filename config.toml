@@ -4,7 +4,7 @@ title = "Kouga's Blog"
 theme = [ "Mainroad" ]
 paginate = 10
 
-disqusShortname = "kougas-blog" # Enable comments by entering your Disqus shortname
+disqusShortname = "kouga-us" # Enable comments by entering your Disqus shortname
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
