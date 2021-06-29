@@ -35,8 +35,7 @@ Install-Module oh-my-posh -Scope AllUsers
 Import-Module oh-my-posh
 ```
 
-顺便我使用的主题配置文件[在这里](https://gist.github.com/omtg-mo/02346ef3b01b170e729dda671efeccc9)喵~ (使用 OneDrive 同步喵~
-截图字体采用的是 `"NotoMono NF"` 喵~
+顺便这是[咱使用的主题配置文件](https://gist.github.com/omtg-mo/02346ef3b01b170e729dda671efeccc9)喵~ 截图字体是 `"NotoMono NF"` 喵~
 
 ![ScreenShot of PowerShell](https://i.imgur.com/NV9b2GQ.png)
 
