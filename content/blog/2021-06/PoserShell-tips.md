@@ -58,6 +58,8 @@ sudo runas /u:MicrosoftAccount\your@domain.com cmd.exe
 
 1. 在 PowerShell 环境里添加一个导出 cmd env 的函数[Source](https://github.com/majkinetor/posh/tree/master/MM_Admin)：
 
+    PS: 可以直接将函数放到自己的 `$PROFILE` 里面，每次开启 PowerShell 就会自动加载进来喵~
+
 ```PowerShell
 function Invoke-Environment {
     param
