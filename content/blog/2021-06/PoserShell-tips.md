@@ -5,6 +5,7 @@ tags: ["Tool", "Code", "PowerShell"]
 categories: ["Tool"]
 draft: false
 isCJKLanguage: true
+thumbnail: "https://i.imgur.com/WGkVDwL.png"
 ---
 
 ## 安装软件包管理器
