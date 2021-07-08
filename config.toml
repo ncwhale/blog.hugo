@@ -31,7 +31,7 @@ pygmentsUseClasses = false
   post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
   mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
-  mathjax = true # Enable MathJax
+  mathjax = false # Enable MathJax
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
@@ -50,6 +50,7 @@ pygmentsUseClasses = false
   # image = "img/placeholder.png" # Logo image. Path relative to "static"
   # title = "" # Logo title, otherwise will use site title
   subtitle = "A simple blog for some idea or fun." # Logo subtitle
+  banner = "/img/banner.25.jpg"
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
