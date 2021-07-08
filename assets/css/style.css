@@ -389,10 +389,10 @@ select {
 }
 
 .logo {
-	/* padding-top: 33%; */
-	/* padding-bottom: 6%; */
+	padding: 31.5% 25px 3% 3rem;
+	/* padding-top: 31.5%;
+	padding-bottom: 3%; */
 	{{- with .Site.Params.logo.banner -}}
-	padding: 31.5% 25px 3% 33px;
 	background-image: url("{{ . | relURL}}");
 	background-size: cover;
 	{{- else -}}
@@ -1226,9 +1226,13 @@ textarea {
 		margin: 0 auto;
 	}
 
-	.wrapper,
-	.logo {
+	.wrapper{
 		padding: 20px;
+	}
+
+	.logo {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 
 	.widget {
