@@ -390,16 +390,13 @@ select {
 
 .logo {
 	padding: 31.5% 25px 3% 3rem;
-	/* padding-top: 31.5%;
-	padding-bottom: 3%; */
+
 	{{- with .Site.Params.logo.banner -}}
 	background-image: url("{{ . | relURL}}");
 	background-size: cover;
 	{{- else -}}
 	padding: 25px;
 	{{- end -}}
-}
-
 }
 
 .logo__link {
