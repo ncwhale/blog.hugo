@@ -1,9 +1,11 @@
 {{- $highlightColor := .Site.Params.style.vars.highlightColor | default (.Site.Params.highlightColor | default "#e22d30") -}}
-
 {{- $fontSans := `"Open Sans", Helvetica, Arial, sans-serif` -}}
 {{- $fontMono := `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` -}}
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
+
+// Global Variables
+$highlightColor: {{ $highlightColor }};
 
 *,
 *::before,
@@ -435,17 +437,17 @@ select {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1;
-	/* color: #000; */
-	animation: logo-glow 3s ease-in-out infinite alternate;
 	color: {{ $highlightColor }};
+	text-shadow: 0 0 0.1rem #fff, 0 0 0.5rem #fff, 0 0 1.1rem $highlightColor, 0 0 1.3rem $highlightColor, 0 0 1.4rem $highlightColor, 0 0 1.5rem $highlightColor, 0 0 1.8rem $highlightColor;
+	animation: logo-glow 5s ease-in-out infinite alternate;
 }
 
 @keyframes logo-glow {
 	from {
-		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		text-shadow: 0 0 0.4rem #fff, 0 0 0.75rem #fff, 0 0 1.2rem $highlightColor, 0 0 1.4rem $highlightColor, 0 0 1.6rem $highlightColor, 0 0 1.8rem $highlightColor, 0 0 2rem $highlightColor;
 	}
 	to {
-		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		text-shadow: 0 0 0.1rem #fff, 0 0 0.25rem #fff, 0 0 0.5rem $highlightColor, 0 0 0.7rem $highlightColor, 0 0 0.9rem $highlightColor, 0 0 1.0rem $highlightColor, 0 0 1.1rem $highlightColor;
 	}
 }
 
@@ -457,8 +459,7 @@ select {
 	font-size: .875rem;
 	font-weight: 700;
 	line-height: 1;
-	/* color: {{ $highlightColor }}; */
-	color:rgba(255, 255, 255, .80);
+	color:rgba(255, 255, 255, 0.9);
 	border-top: 1px solid #ebebeb;
 }
 

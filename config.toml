@@ -35,11 +35,10 @@ pygmentsUseClasses = false
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
-  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
   # customCSS = [ "css/syntax.css" ] # Include custom CSS files
   # customJS = [] # Include custom JS files
 [Params.style.vars]
-  highlightColor = "#CB4042" # Override highlight color
+  highlightColor = "#E21B33" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
