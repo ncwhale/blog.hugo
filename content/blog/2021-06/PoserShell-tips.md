@@ -36,6 +36,19 @@ Install-Module oh-my-posh -Scope AllUsers
 Import-Module oh-my-posh
 ```
 
+顺便 `oh-my-posh` 主题还可以运用在 `cmd.exe` 上喵~
+
+```cmd
+scoop install clink oh-my-posh3
+clink autorun install
+```
+
+然后新建一个内容如下的 `oh-my-posh.lua` 脚本文件在 `Clink` 的 'Scripts' 目录下喵~
+
+```Lua
+load(io.popen('oh-my-posh.exe --config="~/.oh-my-posh.json" --init --shell cmd'):read("*a"))()
+```
+
 顺便这是[咱使用的主题配置文件](https://gist.github.com/omtg-mo/02346ef3b01b170e729dda671efeccc9)喵~ 截图字体是 `"NotoMono NF"` 喵~
 
 ![ScreenShot of PowerShell](https://i.imgur.com/NV9b2GQ.png)
