@@ -2,8 +2,8 @@
 title: "沙花叉の家に騒霊が現象"
 date: 2022-07-18T23:11:36+09:00
 draft: false
-tags: ["Misskey", "PowerShell", "ffmpeg"]
-categories: ["Tool"]
+tags: ["VTuber", "Hololive", "Poltergeist", "Science"]
+categories: ["Science"]
 isCJKLanguage: true
 toc:
   enable: true
