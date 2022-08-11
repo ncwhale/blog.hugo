@@ -12,7 +12,9 @@ toc:
 
 # ZFS Tips for Home NAS
 
-## Automatic Share with Samba
+## Automatic Share with Samba using sharesmb property
+
+```
 
 1. 安装并配置 Samba ， 关键是要在 `/etc/samba/smb.conf` 里配置好 `[global]` 部分：
 
@@ -43,3 +45,5 @@ sudo systemctl restart smbd.service
 ```bash
 sudo zfs set sharesmb=on /tank/volume
 ```
+参考来源：
+[Newbie Corner » [SOLVED] ZFS sharesmb](https://bbs.archlinux.org/viewtopic.php?id=185884)
