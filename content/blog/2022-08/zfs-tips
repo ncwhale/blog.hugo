@@ -1,0 +1,45 @@
+---
+title: "Zfs Tips"
+date: 2022-08-11T12:34:52+09:00
+draft: false
+tags: ["Tool", "Samba", "ZFS", "NFS"]
+categories: ["Tool"]
+isCJKLanguage: true
+toc:
+  enable: true
+  auto: true
+---
+
+# ZFS Tips for Home NAS
+
+## Automatic Share with Samba
+
+1. 安装并配置 Samba ， 关键是要在 `/etc/samba/smb.conf` 里配置好 `[global]` 部分：
+
+```ini
+[global]
+...
+   usershare path = /var/lib/samba/usershares
+   usershare max shares = 100
+   usershare allow guests = yes
+   usershare owner only = no
+```
+
+2. 建立 `/var/lib/samba/usershares` 目录，并设置权限：
+
+```bash
+sudo mkdir -p /var/lib/samba/usershares
+sudo chmod +t /var/lib/samba/usershares
+```
+
+3. 启动或者重启 Samba 服务：
+
+```bash
+sudo systemctl restart smbd.service
+```
+
+4. 自动设置 ZFS dataset 分享：
+
+```bash
+sudo zfs set sharesmb=on /tank/volume
+```
