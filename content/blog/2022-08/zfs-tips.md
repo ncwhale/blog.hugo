@@ -3,7 +3,7 @@ title: "Zfs Tips"
 date: 2022-08-11T12:34:52+09:00
 draft: false
 tags: ["Tool", "Samba", "ZFS", "NFS"]
-categories: ["Tool"]
+categories: ["Tool", "教程"]
 isCJKLanguage: true
 toc:
   enable: true
