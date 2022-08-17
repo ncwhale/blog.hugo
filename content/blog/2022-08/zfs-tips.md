@@ -12,6 +12,23 @@ toc:
 
 # ZFS Tips for Home NAS
 
+## Automatic Mount when Boot
+
+事实上，ZFS 现在已经通过设置多个 systemd .service 和 .target 来开启自动挂载功能。
+
+```bash
+
+sudo systemctl enable zfs-import-cache.service
+sudo systemctl disable zfs-import-scan.service
+sudo systemctl enable zfs-mount.service
+sudo systemctl enable zfs-share.service
+sudo systemctl enable zfs-zed.service
+sudo systemctl enable zfs.target
+```
+
+参考来源:
+[ZOL version 0.6.5.8 - WARNING](https://github.com/archzfs/archzfs/issues/72)
+
 ## Automatic Share with Samba using sharesmb property
 
 ```
@@ -26,6 +43,9 @@ toc:
    usershare allow guests = yes
    usershare owner only = no
 ```
+
+参考来源：
+[]
 
 2. 建立 `/var/lib/samba/usershares` 目录，并设置权限：
 
