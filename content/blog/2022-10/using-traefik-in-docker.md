@@ -131,7 +131,8 @@ experimental:
     # 将合法的 CF 代理头转换成 X-Forward 头，以便服务获取真实客户端地址喵
     cloudflarewarp:
       modulename: github.com/BetterCorp/cloudflarewarp
-      version: v1.3.3```
+      version: v1.3.3
+```
 
 ## 使用 Host network
 
