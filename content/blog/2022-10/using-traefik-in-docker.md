@@ -145,7 +145,7 @@ FROM traefik:v2.9
 RUN apk update && apk add libcap && setcap cap_net_bind_service=+ep /usr/local/bin/traefik
 ```
 
-    Tips: 如果使用 zfs 作为 docker 的存储 driver， 则可能还需要 `sudo zfs set acltype=posixacl tank/docker` 来让 zfs 启用 posix acl 支持喵~
+Tips: 如果使用 zfs 作为 docker 的存储 driver， 则可能还需要 `sudo zfs set acltype=posixacl tank/docker` 来让 zfs 启用 posix acl 支持喵~
 
 然后可以直接修订 `traefik/docker-compose.yaml`
 ```YAML
