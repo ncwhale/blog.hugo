@@ -1,7 +1,7 @@
 ---
 title: "Using traefik as proxy in docker"
 date: 2022-10-13T20:39:26+09:00
-draft: true
+draft: false
 tags: ["Tool", "traefik", "docker", "docker-compose"]
 categories: ["Tool", "教程"]
 isCJKLanguage: true
