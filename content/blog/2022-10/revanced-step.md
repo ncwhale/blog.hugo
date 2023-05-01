@@ -41,18 +41,18 @@ scoop install zulu17-jdk adb # adb 用于自动装包
 
 ```POWERSHELL
 # https://github.com/revanced/revanced-cli/releases/
-wget "https://github.com/revanced/revanced-cli/releases/download/v2.14.0/revanced-cli-2.14.0-all.jar" 
+wget "https://github.com/revanced/revanced-cli/releases/download/v2.20.2-dev.1/revanced-cli-2.20.2-dev.1-all.jar" 
 
 # https://github.com/revanced/revanced-patches/releases
-wget "https://github.com/revanced/revanced-patches/releases/download/v2.85.1/patches.json"
-wget "https://github.com/revanced/revanced-patches/releases/download/v2.85.1/revanced-patches-2.85.1.jar"
+wget "https://github.com/revanced/revanced-patches/releases/download/v2.172.0-dev.9/patches.json"
+wget "https://github.com/revanced/revanced-patches/releases/download/v2.172.0-dev.9/revanced-patches-2.172.0-dev.9.jar"
 
 # https://github.com/revanced/revanced-integrations/releases
-wget "https://github.com/revanced/revanced-integrations/releases/download/v0.54.0/app-release-unsigned.apk"
+wget "https://github.com/revanced/revanced-integrations/releases/download/v0.106.0-dev.7/revanced-integrations-0.106.0-dev.7.apk"
 
 # Micro G https://github.com/microg/GmsCore/releases
-wget "https://github.com/microg/GmsCore/releases/download/v0.2.25.223616/com.google.android.gms-223616050.apk"
-wget "https://github.com/microg/GmsCore/releases/download/v0.2.25.223616/com.google.android.gms-223616050.apk.asc"
+wget "https://github.com/microg/GmsCore/releases/download/v0.2.27.223616/com.google.android.gms-223616054.apk"
+wget "https://github.com/microg/GmsCore/releases/download/v0.2.27.223616/com.google.android.gms-223616054.apk.asc"
 ```
 
 ## 开始打补丁喵~
@@ -71,8 +71,16 @@ wget "https://github.com/microg/GmsCore/releases/download/v0.2.25.223616/com.goo
 5. 使用 `adb devices` 确认设备的ID；
 6. 使用 `java -jar .\revanced-cli-2.14.0-all.jar -a "com.twitter.android_9.63.0-release.0-29630000_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk" -c -d DEVICE_ID_HERE -o "com.twitter.android_9.63.0-release.0-29630000_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_revanced.apk" -b revanced-patches-2.82.1.jar` 来将刚刚下载的 APK 包打补丁并安装到爪机里
 
-    注意： 如果被补丁的是 Google 相关的包（Youtube/Music etc），则还需要 `adb install .\microg.apk` 把 MicroG 安装进去，否则会闪退；
+注意：
+
+*  如果被补丁的是 Google 相关的包（Youtube/Music etc），则还需要 `adb install .\microg.apk` 把 MicroG 安装进去，否则会闪退；
+*  某些APP 需要 `revanced-integrations` 的支持才能修补，此时需要再步骤6那一长串指令后补充 `-m <revanced-integrations.apk>` 喵~
 
 ## 完成！
 
 其实，这些操作对于普通人来说还是过于繁杂了，所以 `ReVanced` 项目有推出一个 [ReVanced Manager](https://github.com/revanced/revanced-manager) 来让大家在爪机上完成所有步骤，但是现在还在 Alpha 阶段，只能说 It works 但是并不稳定喵……等一个社区后续喵~
+
+## CHANGELOG
+
+* 2023-05-01: 更新了各个包的链接版本；
+* 2023-05-01: 增加了一些注意事项喵~
