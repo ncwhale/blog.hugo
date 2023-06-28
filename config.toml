@@ -5,6 +5,7 @@ theme = [ "Mainroad" ]
 paginate = 10
 
 disqusShortname = "kouga-us" # Enable comments by entering your Disqus shortname
+googleAnalytics = 'G-0D75VYJTKG'
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
