@@ -1,6 +1,6 @@
 ---
 title: "2023 New Year Postcard"
-date: 2023-12-27T22:57:12+09:00
+date: 2023-10-27T23:17:42+09:00
 draft: false
 tags: []
 categories: []
