@@ -22,6 +22,9 @@ This page will be hidden until new year coming!
   import { formatDistanceStrict } from "https://cdn.jsdelivr.net/npm/date-fns/formatDistanceStrict.mjs";
   const cditem = document.getElementById("2023NewYearCountdown"), new_year_2024 = new Date("2024-1-1")
   setInterval(()=>{
-    cditem.innerText = formatDistanceStrict(new_year_2024, Date.now())
+    const now = Date.now()
+    if(now > new_year_2024) { location.reload() }else{
+      cditem.innerText = formatDistanceStrict(new_year_2024, now)
+    }
   }, 1000)
 </script>
