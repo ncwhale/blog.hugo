@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "2023自制贺年明信片"
 date: 2023-10-27T23:17:42+09:00
 draft: false
 tags: []
@@ -17,7 +17,7 @@ toc:
 
 其中一些是视频喵~ 完整的相册链接在这里喵： https://photos.app.goo.gl/7Xh5SH3Sb7E5YZ9H7
 
-接下来让咱回忆一下每张照片的拍摄背景喵~
+接下来让咱按照时间顺序回忆一下每张照片的拍摄背景喵~
 
 ## 2022年12月 皇居 枫叶
 
@@ -54,8 +54,60 @@ toc:
 
 不是台湾那个台北公园啦喵~这个是 宫本台 北公园 喵~当时还是早春，所以樱花还没有满开喵~
 
-## 2023年3月 上野 夜樱
+~~顺便那天是 2月14日 ，咱就一个人在那~~
+
+## 2023年3月 上野 昼樱/夜樱
+
+![上野 昼樱](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182916&authkey=%21AAgv3Ys7DzjXJDw&width=1024)
 
 ![上野 夜樱](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182917&authkey=%21ACY_pcKgwlxNNvU&width=1024)
 
-繁华闹市街头，突然就接上了一大片的樱花树喵~
+繁华闹市街头，突然就接上了一大片满开的樱花树喵~
+
+## 同月份 浅草桥 落樱
+
+![浅草桥 河道 落樱](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182915&authkey=%21AM-jqxyDdTQqHJY&width=1024)
+
+    樱花飘落水中
+    像一片片红云
+    映照着船上的人
+    他们的笑容如春
+
+    樱花是生命的礼物
+    它们的美丽不久
+    所以我们要珍惜每一刻
+    和我们爱的人一起赏樱
+
+          —— By New Bing(ChatGPT)
+
+~~一开始AI还认为水里的是垃圾，并抨击了旅游业喵~~
+
+## 2023年6月 海滨 BBQ
+
+![牛排](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182914&authkey=%21AF8WPKZk7LZxvkg&height=1024)
+
+全场最佳喵！现烤牛排喵~由朋友操刀喵（咱就只带了些成品香肠喵……
+
+## 2023年7月 夏天
+
+![夏日 天空 云朵](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182913&authkey=%21AFvrY94ruvMjSpo&width=1024)
+
+字面意义上的夏天喵（X ~~好大的棉花糖喵！~~
+
+## 2023年7月末 新江之岛水族馆 水母
+
+![水母](https://onedrive.live.com/embed?resid=b78603e44cb2fae9%21182912&authkey=%21AAZIGQEZg6didXc&height=1024)
+
+水母总是优雅且迷人的喵~ ~~海蜇皮~~
+
+# 后记
+
+## 去除照片的 GPS 标记
+
+`exiftool "-gps*=" *.jpg`
+
+## 嵌入照片到博客
+
+1. 将照片拖拽到 OneDrive 文件夹里
+2. 右击照片，OneDrive -> View Online
+3. 在网页顶部三个点的菜单里找到 嵌入 ，点击它创建嵌入连接并复制到博客即可（比某谷歌网盘/相册好用一万倍喵！）
