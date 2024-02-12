@@ -36,6 +36,7 @@
 	{{- end }}
 
 	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+	<script async defer src="{{ "js/htmx.min.js" | relURL }}"></script>
 	{{- if not .Site.IsServer }}
 		{{- if hasPrefix .Site.GoogleAnalytics "G-" }}
 		{{ template "_internal/google_analytics.html" . }}
@@ -45,7 +46,7 @@
 	{{- end }}
 </head>
 <body class="body">
-	<div class="container container--outer">
+	<div class="container container--outer" hx-boost="true" >
 		{{ partial "header" . }}
 		<div class="wrapper flex">
 			<div class="primary">
@@ -61,7 +62,6 @@
 		</div>
 		{{ partial "footer" . }}
 	</div>
-<script async defer src="{{ "js/menu.js" | relURL }}"></script>
 {{ range .Site.Params.customJS -}}
 <script src="{{ . | relURL }}"></script>
 {{- end }}
