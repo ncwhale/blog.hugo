@@ -2,9 +2,13 @@ baseURL = "https://koa.im/"
 languageCode = "zh-cn"
 title = "Kouga's Blog"
 theme = [ "Mainroad" ]
-paginate = 10
 
-disqusShortname = "kouga-us" # Enable comments by entering your Disqus shortname
+pagination.pagerSize = 10
+
+[services]
+  [services.disqus]
+    shortname = "kouga-us" # Enable comments by entering your Disqus shortname
+
 googleAnalytics = 'G-0D75VYJTKG'
 
 pygmentsCodefences = true
@@ -12,12 +16,7 @@ pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "dracula"
 pygmentsUseClasses = false
 
-[Author] # Used in authorbox
-  name = "Whale Mo"
-  bio = "Nyan?"
-  avatar = "img/avatar.png"
-
-[Params]
+[params]
   copyright = "Whale Mo"
   description = "A simple blog for some idea or fun."
   opengraph = true # Enable OpenGraph if true
@@ -38,6 +37,11 @@ pygmentsUseClasses = false
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   # customCSS = [ "css/syntax.css" ] # Include custom CSS files
   # customJS = [] # Include custom JS files
+    [params.author]
+      name = "Whale Mo"
+      bio = "Nyan?"
+      avatar = "img/avatar.png"
+
 [Params.style.vars]
   highlightColor = "#E21B33" # Override highlight color
 
