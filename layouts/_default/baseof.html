@@ -38,7 +38,7 @@
 	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
 	<script async defer src="{{ "js/htmx.min.js" | relURL }}"></script>
 	{{- if not hugo.IsServer }}
-		{{- if hasPrefix .Site.GoogleAnalytics "G-" }}
+		{{- if hasPrefix .Site.Config.Services.GoogleAnalytics.ID "G-" }}
 		{{ template "_internal/google_analytics.html" . }}
 		{{- else }}
 		{{ template "_internal/google_analytics_async.html" . }}

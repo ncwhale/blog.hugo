@@ -9,7 +9,8 @@ pagination.pagerSize = 10
   [services.disqus]
     shortname = "kouga-us" # Enable comments by entering your Disqus shortname
 
-googleAnalytics = 'G-0D75VYJTKG'
+  [services.googleAnalytics]
+    id = 'G-0D75VYJTKG'
 
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
