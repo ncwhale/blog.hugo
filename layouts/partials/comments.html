@@ -18,7 +18,7 @@
   {{- end -}}
 {{- end -}}
 
-<section id="comments-section" class="comments hx-echo">
+<section id="comments-section" class="comments hx-echo" hx-boost="false">
   <h3 class="hx-echo__title">评论区</h3>
 
   {{- if hugo.IsServer }}
@@ -50,6 +50,7 @@
         hx-post="/api/comments"
         hx-target="#comment-list"
         hx-swap="beforeend"
+        hx-push-url="false"
         hx-disabled-elt="find button[type='submit']">
     <input type="hidden" name="slug" value="{{ $slug }}">
     <input type="hidden" id="parent_id" name="parent_id" value="">
@@ -123,6 +124,15 @@
 
   (function () {
     formatHxEchoTimestamps();
+    var formEl = document.getElementById('comment-form');
+    if (formEl && !formEl.__hxFallbackBound) {
+      formEl.__hxFallbackBound = true;
+      formEl.addEventListener('submit', function (e) {
+        if (!window.htmx) {
+          e.preventDefault();
+        }
+      });
+    }
     if (window.__hxEchoEventsBound) return;
     window.__hxEchoEventsBound = true;
 
