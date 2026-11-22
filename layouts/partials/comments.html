@@ -42,7 +42,7 @@
   <ul id="comment-list"
       class="comment-list"
       hx-get="/api/comments?slug={{ $slug | urlquery }}&after={{ $lastCursor }}"
-      hx-trigger="load"
+      hx-trigger="intersect once"
       hx-swap="beforeend">{{ $staticHtml | safeHTML }}</ul>
 
   <form id="comment-form"
@@ -122,6 +122,35 @@
     if (indicator) indicator.style.display = 'none';
   }
 
+  function getHxEchoMaxCommentId() {
+    var maxId = 0;
+    var items = document.querySelectorAll('#comments-section li[id^="comment-"]');
+    for (var i = 0; i < items.length; i++) {
+      var match = /^comment-(\d+)$/.exec(items[i].id);
+      if (match) {
+        var id = parseInt(match[1], 10);
+        if (id > maxId) maxId = id;
+      }
+    }
+    return maxId;
+  }
+
+  function deduplicateHxEchoHtml(rawHtml) {
+    if (!rawHtml) return rawHtml;
+    var tpl = document.createElement('template');
+    tpl.innerHTML = rawHtml;
+    var nodes = tpl.content.querySelectorAll('li[id^="comment-"]');
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      if (/^comment-\d+$/.test(el.id) && document.getElementById(el.id)) {
+        if (el.parentNode) {
+          el.parentNode.removeChild(el);
+        }
+      }
+    }
+    return tpl.innerHTML;
+  }
+
   (function () {
     formatHxEchoTimestamps();
     var formEl = document.getElementById('comment-form');
@@ -135,6 +164,34 @@
     }
     if (window.__hxEchoEventsBound) return;
     window.__hxEchoEventsBound = true;
+
+    document.addEventListener('htmx:configRequest', function (evt) {
+      var elt = evt.detail && evt.detail.elt;
+      var path = evt.detail && evt.detail.path;
+      if (elt && elt.id === 'comment-list' && typeof path === 'string') {
+        var maxId = getHxEchoMaxCommentId();
+        if (maxId > 0) {
+          evt.detail.path = path.replace(/([?&]after=)(\d+)/, function (_, prefix, cur) {
+            var curNum = parseInt(cur, 10) || 0;
+            return prefix + Math.max(curNum, maxId);
+          });
+        }
+      }
+    });
+
+    document.addEventListener('htmx:beforeSwap', function (evt) {
+      var target = evt.detail && evt.detail.target;
+      if (!target) return;
+      var section = document.getElementById('comments-section');
+      if (!section || !section.contains(target)) return;
+      if (typeof evt.detail.serverResponse === 'string' && evt.detail.serverResponse.indexOf('comment-') !== -1) {
+        var filtered = deduplicateHxEchoHtml(evt.detail.serverResponse);
+        evt.detail.serverResponse = filtered;
+        if (target.id === 'comment-list' && !filtered.trim()) {
+          evt.detail.shouldSwap = false;
+        }
+      }
+    });
 
     document.addEventListener('htmx:beforeRequest', function (evt) {
       var form = document.getElementById('comment-form');
