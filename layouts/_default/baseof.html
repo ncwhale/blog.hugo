@@ -36,6 +36,9 @@
 	{{- end }}
 
 	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+	{{- if hugo.IsServer }}
+	<meta name="htmx-config" content='{"selfRequestsOnly": false}'>
+	{{- end }}
 	<script defer src="{{ "js/htmx.min.js" | relURL }}"></script>
 	{{- if not hugo.IsServer }}
 		{{- if hasPrefix .Site.Config.Services.GoogleAnalytics.ID "G-" }}
