@@ -38,6 +38,8 @@ pygmentsUseClasses = false
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   # customCSS = [ "css/syntax.css" ] # Include custom CSS files
   # customJS = [] # Include custom JS files
+  hxEchoExportBase = "https://koa.im/api/comments"
+  hxEchoLocalBase = "http://127.0.0.1:8787/api/comments"
     [params.author]
       name = "Whale Mo"
       bio = "Nyan?"

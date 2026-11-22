@@ -1,28 +1,163 @@
-{{- $pc := .Site.Config.Privacy.Disqus -}}
-{{- if not $pc.Disable -}}
-<section class="comments">
-{{ if .Site.Config.Services.Disqus.Shortname }}<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    {{with .Params.disqus_identifier }}this.page.identifier = '{{ . }}';
-    {{else}}this.page.identifier = '{{ .RelPermalink | html }}';{{end}}
-    {{with .Params.disqus_title }}this.page.title = '{{ . }}';
-    {{else}}{{with .Params.title }}this.page.title = '{{ . }}';{{end}}{{end}}
-    {{with .Params.disqus_url }}this.page.url = '{{ . | html  }}';
-    {{else}}this.page.url = '{{ .RelPermalink | absURL }}';{{end}}
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
+{{- $commentsEnabled := ne (printf "%v" (index .Params "comments" | default true)) "false" -}}
+{{- if $commentsEnabled -}}
+{{- $slug := .RelPermalink -}}
+{{- $prodBase := site.Params.hxEchoExportBase | default "https://koa.im/api/comments" -}}
+{{- $localBase := site.Params.hxEchoLocalBase | default "http://127.0.0.1:8787/api/comments" -}}
+{{- $exportBase := cond hugo.IsServer $localBase $prodBase -}}
+{{- $staticHtml := "" -}}
+{{- $lastCursor := 0 -}}
+
+{{- $exportUrl := printf "%s/export?slug=%s" (strings.TrimRight "/" $exportBase) ($slug | urlquery) -}}
+{{- with try (resources.GetRemote $exportUrl) -}}
+  {{- if not .Err -}}
+    {{- with .Value -}}
+      {{- $data := .Content | transform.Unmarshal -}}
+      {{- with $data.html }}{{ $staticHtml = . }}{{ end -}}
+      {{- with $data.lastCursor }}{{ $lastCursor = . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<section id="comments-section" class="comments hx-echo">
+  <h3 class="hx-echo__title">评论区</h3>
+
+  {{- if hugo.IsServer }}
+  {{- $parsed := urls.Parse $localBase }}
+  {{- $localOrigin := printf "%s://%s" $parsed.Scheme $parsed.Host }}
+  <script>
+    (function () {
+      if (window.__hxEchoLocalProxy) return;
+      window.__hxEchoLocalProxy = true;
+      var apiOrigin = {{ $localOrigin }};
+      document.addEventListener('htmx:configRequest', function (evt) {
+        var path = evt.detail && evt.detail.path;
+        if (typeof path === 'string' && path.indexOf('/api/comments') === 0) {
+          evt.detail.path = apiOrigin + path;
         }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + {{ .Site.Config.Services.Disqus.Shortname }} + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+      });
     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>{{end}}
+  </script>
+  {{- end }}
+
+  <ul id="comment-list"
+      class="comment-list"
+      hx-get="/api/comments?slug={{ $slug | urlquery }}&after={{ $lastCursor }}"
+      hx-trigger="load"
+      hx-swap="beforeend">{{ $staticHtml | safeHTML }}</ul>
+
+  <form id="comment-form"
+        class="comment-form"
+        hx-post="/api/comments"
+        hx-target="#comment-list"
+        hx-swap="beforeend"
+        hx-disabled-elt="find button[type='submit']">
+    <input type="hidden" name="slug" value="{{ $slug }}">
+    <input type="hidden" id="parent_id" name="parent_id" value="">
+    <input type="hidden" id="reply_to_author" name="reply_to_author" value="">
+
+    <div id="reply-indicator" class="reply-indicator" style="display:none;">
+      <span>正在回复 <strong id="reply-target-name"></strong></span>
+      <button type="button" class="reply-cancel-btn" onclick="clearReplyTarget()">取消回复</button>
+    </div>
+
+    <div style="position:absolute; left:-9999px;" aria-hidden="true">
+      <input type="text" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="comment-form__row">
+      <input type="text" name="author" placeholder="你的昵称" required maxlength="50" autocomplete="name">
+    </div>
+    <div class="comment-form__row">
+      <textarea id="comment-textarea" name="content" rows="4" placeholder="写下你的想法（支持 Markdown）..." required maxlength="2500"></textarea>
+    </div>
+    <div id="comment-error" class="comment-error" role="alert" style="display:none;"></div>
+    <div class="comment-form__actions">
+      <button type="submit" class="comment-submit-btn">发表评论</button>
+    </div>
+  </form>
 </section>
+
+<script>
+  function formatHxEchoTimestamps(root) {
+    var scope = root || document.getElementById('comments-section');
+    if (!scope) return;
+    var nodes = scope.querySelectorAll('time[data-ts]');
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      if (el.dataset.formatted === '1') continue;
+      var ts = parseInt(el.getAttribute('data-ts'), 10);
+      if (!isNaN(ts) && ts > 0) {
+        var d = new Date(ts * 1000);
+        var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+        el.textContent = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+          ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+        el.setAttribute('datetime', d.toISOString());
+        el.dataset.formatted = '1';
+      }
+    }
+  }
+
+  function setReplyTarget(rootId, authorName) {
+    var parentInput = document.getElementById('parent_id');
+    var replyAuthorInput = document.getElementById('reply_to_author');
+    var targetName = document.getElementById('reply-target-name');
+    var indicator = document.getElementById('reply-indicator');
+    var textarea = document.getElementById('comment-textarea');
+    if (!parentInput || !replyAuthorInput || !targetName || !indicator || !textarea) return;
+
+    parentInput.value = rootId;
+    replyAuthorInput.value = authorName;
+    targetName.textContent = '@' + authorName;
+    indicator.style.display = 'flex';
+    textarea.focus();
+  }
+
+  function clearReplyTarget() {
+    var parentInput = document.getElementById('parent_id');
+    var replyAuthorInput = document.getElementById('reply_to_author');
+    var indicator = document.getElementById('reply-indicator');
+    if (parentInput) parentInput.value = '';
+    if (replyAuthorInput) replyAuthorInput.value = '';
+    if (indicator) indicator.style.display = 'none';
+  }
+
+  (function () {
+    formatHxEchoTimestamps();
+    if (window.__hxEchoEventsBound) return;
+    window.__hxEchoEventsBound = true;
+
+    document.addEventListener('htmx:beforeRequest', function (evt) {
+      var form = document.getElementById('comment-form');
+      if (form && evt.detail && evt.detail.elt === form) {
+        var errEl = document.getElementById('comment-error');
+        if (errEl) {
+          errEl.textContent = '';
+          errEl.style.display = 'none';
+        }
+      }
+    });
+
+    document.addEventListener('htmx:afterRequest', function (evt) {
+      var form = document.getElementById('comment-form');
+      if (form && evt.detail && evt.detail.elt === form) {
+        if (evt.detail.successful) {
+          form.reset();
+          clearReplyTarget();
+        } else {
+          var errEl = document.getElementById('comment-error');
+          if (errEl) {
+            var xhr = evt.detail.xhr;
+            var msg = (xhr && xhr.responseText) ? xhr.responseText.trim() : '评论发送失败，请稍后重试。';
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+          }
+        }
+      }
+    });
+
+    document.addEventListener('htmx:afterSettle', function () {
+      formatHxEchoTimestamps();
+    });
+  })();
+</script>
 {{- end -}}
