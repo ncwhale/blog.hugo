@@ -1,7 +1,7 @@
 ---
 title: 'Vibe Blog'
 date: 2026-11-23T14:02:38+09:00
-draft: true
+draft: false
 tags: ["教程", "工具", "BLOG", "VIBE"]
 categories: ["Tool"]
 isCJKLanguage: true
