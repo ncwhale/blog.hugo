@@ -1157,7 +1157,7 @@ img {
 }
 
 .comment-list:empty::after {
-	content: "暂无评论，来写下第一条评论吧~";
+	content: attr(data-empty-text);
 	display: block;
 	padding: 14px 0 18px;
 	color: var(--ink-subtle);

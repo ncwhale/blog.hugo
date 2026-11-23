@@ -8,6 +8,12 @@
 - id: sidemenu_title
   translation: "菜单"
 
+- id: aria_article_nav
+  translation: "文章导航"
+
+- id: aria_pagination
+  translation: "分页导航"
+
 # Post meta
 - id: meta_lastmod
   translation: "最后修改"
@@ -40,6 +46,55 @@
 # Search widget
 - id: search_placeholder
   translation: "搜索…"
+
+- id: search_submit
+  translation: "搜索"
+
+# Comments (hx-echo)
+- id: comments_title
+  translation: "评论区"
+
+- id: comments_empty
+  translation: "暂无评论，来写下第一条评论吧~"
+
+- id: comments_replying_to
+  translation: "正在回复"
+
+- id: comments_cancel_reply
+  translation: "取消回复"
+
+- id: comments_author_placeholder
+  translation: "你的昵称"
+
+- id: comments_content_placeholder
+  translation: "写下你的想法（支持 Markdown）..."
+
+- id: comments_submit
+  translation: "发表评论"
+
+- id: comments_error_generic
+  translation: "评论发送失败，请稍后重试。"
+
+- id: comments_reply
+  translation: "回复"
+
+- id: comments_reply_count
+  translation: "{{ .Count }} 条回复"
+
+- id: comments_load_older_comments
+  translation: "加载更早评论"
+
+- id: comments_load_older_replies
+  translation: "加载更早回复"
+
+- id: comments_load_older_replies_remaining
+  translation: "加载更早回复 (还有 {{ .Count }} 条)"
+
+- id: comments_load_replies_total
+  translation: "加载回复 (共 {{ .Count }} 条)"
+
+- id: comments_load_newer_replies
+  translation: "加载更多回复"
 
 # Languages widget
 - id: languages_title

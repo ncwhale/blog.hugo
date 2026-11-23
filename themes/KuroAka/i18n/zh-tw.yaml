@@ -1,0 +1,141 @@
+# General
+- id: read_more
+  translation: "閱讀全文…"
+
+- id: menu_label
+  translation: "選單"
+
+- id: sidemenu_title
+  translation: "選單"
+
+- id: aria_article_nav
+  translation: "文章導覽"
+
+- id: aria_pagination
+  translation: "分頁導覽"
+
+# Post meta
+- id: meta_lastmod
+  translation: "最後修改"
+
+- id: meta_translations
+  translation: "翻譯"
+
+# Table of Contents
+- id: toc_title
+  translation: "目錄"
+
+# Post nav
+- id: post_nav_prev
+  translation: "上一篇"
+
+- id: post_nav_next
+  translation: "下一篇"
+
+# Authorbox
+- id: authorbox_name
+  translation: "關於 {{ .Name }}"
+
+# Sidebar
+- id: sidebar_warning
+  translation: "警告"
+
+- id: sidebar_recommendation
+  translation: "請至少選擇一個側邊欄元件"
+
+# Search widget
+- id: search_placeholder
+  translation: "搜尋…"
+
+- id: search_submit
+  translation: "搜尋"
+
+# Comments (hx-echo)
+- id: comments_title
+  translation: "評論區"
+
+- id: comments_empty
+  translation: "尚無評論，來寫下第一則評論吧~"
+
+- id: comments_replying_to
+  translation: "正在回覆"
+
+- id: comments_cancel_reply
+  translation: "取消回覆"
+
+- id: comments_author_placeholder
+  translation: "你的暱稱"
+
+- id: comments_content_placeholder
+  translation: "寫下你的想法（支援 Markdown）..."
+
+- id: comments_submit
+  translation: "發表評論"
+
+- id: comments_error_generic
+  translation: "評論送出失敗，請稍後再試。"
+
+- id: comments_reply
+  translation: "回覆"
+
+- id: comments_reply_count
+  translation: "{{ .Count }} 則回覆"
+
+- id: comments_load_older_comments
+  translation: "載入較早評論"
+
+- id: comments_load_older_replies
+  translation: "載入較早回覆"
+
+- id: comments_load_older_replies_remaining
+  translation: "載入較早回覆 (還有 {{ .Count }} 則)"
+
+- id: comments_load_replies_total
+  translation: "載入回覆 (共 {{ .Count }} 則)"
+
+- id: comments_load_newer_replies
+  translation: "載入更多回覆"
+
+# Languages widget
+- id: languages_title
+  translation: "語言"
+
+# Categories widget
+- id: categories_title
+  translation: "分類"
+
+# Recent Posts widget
+- id: recent_title
+  translation: "近期文章"
+
+# Social widget
+- id: social_title
+  translation: "社交"
+
+# Tags List widget
+- id: tags_title
+  translation: "標籤"
+
+# Footer
+- id: footer_credits
+  translation: "基於 <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> 與 KuroAka 主題建置"
+
+# 404
+- id: 404_title
+  translation: "404. 找不到您要找的頁面"
+
+- id: 404_text
+  translation: "您要找的頁面可能已被移除、刪除或不存在，不妨回到首頁瀏覽。"
+
+- id: 404_linktext
+  translation: "回到首頁"
+
+# No posts empty state
+- id: noposts_warning_title
+  translation: "目前還沒有任何內容！"
+
+- id: noposts_warning_description
+  translation: "在 <b>content</b> 目錄下的任意資料夾發佈文章後，它就會顯示在這裡。"
+
+- id: noposts_warning_tip
+  translation: "<b>提示:</b> 可透過 <b>mainSections</b> 參數控制首頁顯示的文章板塊。"
