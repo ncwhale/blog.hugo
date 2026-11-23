@@ -25,7 +25,7 @@
 		</footer>
 		{{- end }}
 	</article>
-	{{ partial "authorbox.html" . }}
+	{{- if .Param "authorbox" }}{{ partial "authorbox.html" . }}{{- end }}
 	{{ partial "pager.html" . }}
 	{{ partial "comments.html" . }}
 </main>
