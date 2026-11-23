@@ -7,7 +7,8 @@
 {{- $staticHtml := "" -}}
 {{- $lastCursor := 0 -}}
 
-{{- $exportUrl := printf "%s/export?slug=%s" (strings.TrimRight "/" $exportBase) ($slug | urlquery) -}}
+{{- $lang := site.Params.hxEchoLang | default (cond hugo.IsMultilingual site.Language.Lang (site.Language.Locale | default site.Language.Lang | default "en")) -}}
+{{- $exportUrl := printf "%s/export?slug=%s&lang=%s" (strings.TrimRight "/" $exportBase) ($slug | urlquery) ($lang | urlquery) -}}
 {{- with try (resources.GetRemote $exportUrl) -}}
   {{- if not .Err -}}
     {{- with .Value -}}
@@ -41,7 +42,7 @@
 
   <ul id="comment-list"
       class="comment-list"
-      hx-get="/api/comments?slug={{ $slug | urlquery }}&after={{ $lastCursor }}"
+      hx-get="/api/comments?slug={{ $slug | urlquery }}&after={{ $lastCursor }}&lang={{ $lang | urlquery }}"
       hx-trigger="intersect once"
       hx-swap="beforeend">{{ $staticHtml | safeHTML }}</ul>
 
@@ -53,6 +54,7 @@
         hx-push-url="false"
         hx-disabled-elt="find button[type='submit']">
     <input type="hidden" name="slug" value="{{ $slug }}">
+    <input type="hidden" name="lang" value="{{ $lang }}">
     <input type="hidden" id="parent_id" name="parent_id" value="">
     <input type="hidden" id="reply_to_author" name="reply_to_author" value="">
 
