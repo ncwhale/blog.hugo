@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "**/layouts/**/*.html": "gotmpl"
+  },
+  "emmet.includeLanguages": {
+    "gotmpl": "html"
+  }
+}
