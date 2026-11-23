@@ -16,6 +16,8 @@ toc:
 2. Append `<script async defer src="{{ "js/htmx.min.js" | relURL }}"></script>` into `layouts\_default\baseof.html` head block.
 3. Append `hx-boost="true"` to `<div class="container container--outer">` in the same file.
 
+<!--more-->
+
 # 太长不看教程
 
 1. 下载 [htmx.min.js](https://unpkg.com/htmx.org/dist/htmx.min.js) 放到 `static\js\` 目录下；
@@ -30,4 +32,6 @@ toc:
 
 ## 缺陷
 
-目前已知问题是 Disqus 的评论区会引起链接失去HTMX的支持变成全页重载喵。
+~~目前已知问题是 Disqus 的评论区会引起链接失去HTMX的支持变成全页重载喵。~~
+
+> **2026-11 更新**：这个问题已经解决啦喵！现在已经用自研的 `hx-echo` 评论系统与全新主题 `KuroAka` 彻底替代了 Disqus，详情请看新博文：[Vibe Blog](/blog/2026-11/vibe-blog/)。

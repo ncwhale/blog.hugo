@@ -4,6 +4,7 @@ title = "Kouga's Blog"
 theme = [ "KuroAka" ]
 
 pagination.pagerSize = 10
+hasCJKLanguage = true
 
 [services]
   [services.disqus]
@@ -26,7 +27,6 @@ pygmentsUseClasses = false
   menu_item_separator = " - "
   authorbox = false # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
-  hasCJKLanguage = true
   enableRobotsTXT = true
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["author", "date", "categories", "translations"] # Order of post meta information

@@ -16,8 +16,9 @@
 			<div class="post-card__meta meta">{{ . }}</div>
 			{{- end }}
 		</header>
-		<div class="post-card__excerpt content">
-			{{ .Summary }}
+		{{- $excerpt := .Description | default (.Summary | plainify | htmlUnescape) -}}
+		<div class="post-card__excerpt">
+			<p>{{ $excerpt | truncate 140 }}</p>
 		</div>
 		{{- if and .Site.Params.readmore .Truncated }}
 		<div class="post-card__footer">
