@@ -10,10 +10,14 @@
 {{- if $sidebar -}}
 <aside class="sidebar{{ if eq $sidebar "left" }} sidebar--left{{ end }}">
 {{- $root := . }}
+{{- $hideTaglist := and (eq $root.Kind "taxonomy") (eq $root.Data.Plural "tags") -}}
+{{- $hideCategories := and (eq $root.Kind "taxonomy") (eq $root.Data.Plural "categories") -}}
 {{- with (default .Site.Params.sidebar.widgets .Params.widgets) -}}
 	{{- range $widget := . }}
-		{{- $p := printf "widgets/%s.html" $widget }}
-		{{- partial $p $root }}
+		{{- if not (or (and $hideTaglist (eq $widget "taglist")) (and $hideCategories (eq $widget "categories"))) }}
+			{{- $p := printf "widgets/%s.html" $widget }}
+			{{- partial $p $root }}
+		{{- end }}
 	{{- end }}
 {{- else }}
 	<p class="sidebar__warning"><strong>{{ T "sidebar_warning" }}:</strong><br>{{ T "sidebar_recommendation" }}</p>
