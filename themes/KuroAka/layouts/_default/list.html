@@ -10,11 +10,22 @@
 		{{ . }}
 	</div>
 	{{- end }}
+	{{- if eq .Kind "taxonomy" }}
+	<div class="taxonomy-grid">
+		{{- range .Data.Terms.ByCount }}
+		<a class="taxonomy-chip" href="{{ .Page.RelPermalink }}">
+			<span class="taxonomy-chip__name">{{ .Page.Title }}</span>
+			<span class="taxonomy-chip__count">{{ .Count }}</span>
+		</a>
+		{{- end }}
+	</div>
+	{{- else }}
 	<div class="post-grid">
 		{{- range .Paginator.Pages }}
 			{{- .Render "summary" }}
 		{{- end }}
 	</div>
 	{{ partial "pagination.html" . }}
+	{{- end }}
 </main>
 {{ end }}
