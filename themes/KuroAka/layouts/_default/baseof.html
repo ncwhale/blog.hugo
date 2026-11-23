@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "zh-cn" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
+	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description | default (.Summary | plainify | truncate 160) }}{{ end }}">
+	{{- if .Site.Params.opengraph }}
+		{{ template "_internal/opengraph.html" . }}
+	{{- end }}
+	{{- if .Site.Params.schema }}
+		{{ template "_internal/schema.html" . }}
+	{{- end }}
+	{{- if .Site.Params.twitter_cards }}
+		{{ template "_internal/twitter_cards.html" . }}
+	{{- end }}
+
+	{{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" }}
+	{{- if hasPrefix $googleFontsLink "https://fonts.googleapis.com/" }}
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" {{ printf `href="%s"` $googleFontsLink | safeHTMLAttr }}>
+	{{- end }}
+
+	{{- $scss_options := (dict "outputStyle" "compressed" "enableSourceMap" false) -}}
+	{{- $style := resources.Get "css/kuroaka.scss" | resources.ExecuteAsTemplate "css/kuroaka.scss" . | css.Sass $scss_options | fingerprint -}}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	{{- range .Site.Params.customCSS }}
+	<link rel="stylesheet" href="{{ . | relURL }}">
+	{{- end }}
+
+	{{- with .OutputFormats.Get "rss" }}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
+
+	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+	{{- if hugo.IsServer }}
+	<meta name="htmx-config" content='{"selfRequestsOnly": false}'>
+	{{- end }}
+	<script defer src="{{ "js/htmx.min.js" | relURL }}"></script>
+	{{- if not hugo.IsServer }}
+		{{- if hasPrefix .Site.Config.Services.GoogleAnalytics.ID "G-" }}
+		{{ template "_internal/google_analytics.html" . }}
+		{{- else }}
+		{{ template "_internal/google_analytics_async.html" . }}
+		{{- end }}
+	{{- end }}
+</head>
+<body class="site-canvas">
+	<div id="hx-nav-progress" class="hx-progress" aria-hidden="true"></div>
+	<div class="site-frame">
+		{{ partial "header.html" . }}
+		{{- $sidebar := false -}}
+		{{- if eq .Kind "home" -}}
+			{{- $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) -}}
+		{{- else if eq .Kind "page" -}}
+			{{- $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) -}}
+		{{- else -}}
+			{{- $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) -}}
+		{{- end -}}
+		<div id="app-shell"
+		     class="site-shell"
+		     hx-history-elt
+		     hx-boost="true"
+		     hx-target="#app-content"
+		     hx-select="#app-content"
+		     hx-select-oob="#site-nav"
+		     hx-swap="outerHTML show:window:top"
+		     hx-indicator="#hx-nav-progress">
+			{{ partial "menu.html" . }}
+			<div id="app-content" class="site-body{{ if $sidebar }} site-body--with-sidebar{{ if eq $sidebar "left" }} site-body--sidebar-left{{ end }}{{ end }}">
+				<div class="site-primary">
+					{{ block "main" . }}
+						{{ with .Content }}
+						<div class="content page-content">
+							{{ . }}
+						</div>
+						{{ end }}
+					{{ end }}
+				</div>
+				{{ partial "sidebar.html" . }}
+			</div>
+		</div>
+		{{ partial "footer.html" . }}
+	</div>
+	{{- range .Site.Params.customJS }}
+	<script src="{{ . | relURL }}"></script>
+	{{- end }}
+	{{- partial "mathjax.html" . -}}
+</body>
+</html>

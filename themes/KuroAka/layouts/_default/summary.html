@@ -1,0 +1,28 @@
+<article class="post-card{{ if .Params.thumbnail }} post-card--has-thumb{{ end }}">
+	{{- if .Params.thumbnail }}
+	<figure class="post-card__thumb">
+		<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" loading="lazy">
+	</figure>
+	{{- end }}
+	<div class="post-card__body">
+		<header class="post-card__header">
+			<h2 class="post-card__title">
+				<a class="post-card__link" href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a>
+			</h2>
+			{{- with .Params.lead }}
+			<p class="post-card__lead">{{ . }}</p>
+			{{- end }}
+			{{ with partial "post_meta.html" . -}}
+			<div class="post-card__meta meta">{{ . }}</div>
+			{{- end }}
+		</header>
+		<div class="post-card__excerpt content">
+			{{ .Summary }}
+		</div>
+		{{- if and .Site.Params.readmore .Truncated }}
+		<div class="post-card__footer">
+			<span class="btn post-card__readmore">{{ T "read_more" }}</span>
+		</div>
+		{{- end }}
+	</div>
+</article>

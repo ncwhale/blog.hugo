@@ -1,7 +1,7 @@
 baseURL = "https://koa.im/"
-languageCode = "zh-cn"
+locale = "zh-cn"
 title = "Kouga's Blog"
-theme = [ "Mainroad" ]
+theme = [ "KuroAka" ]
 
 pagination.pagerSize = 10
 
@@ -45,7 +45,7 @@ pygmentsUseClasses = false
       bio = "Nyan?"
       avatar = "img/avatar.png"
 
-[Params.style.vars]
+[params.style.vars]
   highlightColor = "#E21B33" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
@@ -53,13 +53,13 @@ pygmentsUseClasses = false
   # fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
   # fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
-[Params.logo]
+[params.logo]
   # image = "img/placeholder.png" # Logo image. Path relative to "static"
   # title = "" # Logo title, otherwise will use site title
   subtitle = "A simple blog for some idea or fun." # Logo subtitle
   banner = "/img/banner.25.jpg"
 
-[Params.sidebar]
+[params.sidebar]
   home = "right" # Configure layout for home page
   list = "right"  # Configure layout for list pages
   single = false # Configure layout for single pages
@@ -68,12 +68,12 @@ pygmentsUseClasses = false
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
 
-[Params.widgets]
+[params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
   categories_counter = true # Enable counter for each category in "Categories" widget
   tags_counter = true # Enable counter for each tag in "Tags" widget
 
-[Params.widgets.social]
+[params.widgets.social]
   # Enable parts of social widget
   # facebook = "username"
   twitter = "Kouga_"

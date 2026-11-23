@@ -1,0 +1,9 @@
+<footer class="site-footer">
+	<div class="site-footer__inner">
+		{{ partial "footer_links.html" . }}
+		<div class="site-footer__copyright">
+			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
+			<span class="site-footer__credits">{{ T "footer_credits" | safeHTML }}</span>
+		</div>
+	</div>
+</footer>

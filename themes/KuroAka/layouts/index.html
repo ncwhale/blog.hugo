@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="main-stream" role="main">
+	{{- with .Content }}
+	<div class="content page-intro">
+		{{ . }}
+	</div>
+	{{- end }}
+	{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+	<div class="post-grid">
+		{{- range $paginator.Pages }}
+			{{- .Render "summary" }}
+		{{- end }}
+	</div>
+	{{- if and (eq $paginator.TotalNumberOfElements 0) (not $.Content) }}
+		<div class="notice-box">
+			{{ partial "svg/files.svg" (dict "class" "notice-box__icon") }}
+			<h3 class="notice-box__title">{{ T "noposts_warning_title" | safeHTML }}</h3>
+			<div class="notice-box__text">
+				<p>{{ T "noposts_warning_description" | safeHTML }}</p>
+				<p>{{ T "noposts_warning_tip" | safeHTML }}</p>
+			</div>
+		</div>
+	{{- end }}
+	{{ partial "pagination.html" . }}
+</main>
+{{ end }}

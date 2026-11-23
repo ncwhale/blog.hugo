@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main class="main-stream" role="main">
+	{{- with .Title }}
+	<header class="archive-header">
+		<h1 class="archive-header__title">{{ . }}</h1>
+	</header>
+	{{- end }}
+	{{- with .Content }}
+	<div class="content page-intro">
+		{{ . }}
+	</div>
+	{{- end }}
+	<div class="post-grid">
+		{{- range .Paginator.Pages }}
+			{{- .Render "summary" }}
+		{{- end }}
+	</div>
+	{{ partial "pagination.html" . }}
+</main>
+{{ end }}

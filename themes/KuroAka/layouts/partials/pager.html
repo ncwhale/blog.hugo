@@ -1,0 +1,18 @@
+{{- if .Param "pager" }}
+{{- if or (.PrevInSection) (.NextInSection) }}
+<nav class="pager" aria-label="Article navigation">
+	{{- if .PrevInSection }}
+	<a class="pager__card pager__card--prev" href="{{ .PrevInSection.RelPermalink }}" rel="prev">
+		<span class="pager__subtitle">&laquo;&thinsp;{{ T "post_nav_prev" }}</span>
+		<span class="pager__title">{{ .PrevInSection.Title }}</span>
+	</a>
+	{{- end }}
+	{{- if .NextInSection }}
+	<a class="pager__card pager__card--next" href="{{ .NextInSection.RelPermalink }}" rel="next">
+		<span class="pager__subtitle">{{ T "post_nav_next" }}&thinsp;&raquo;</span>
+		<span class="pager__title">{{ .NextInSection.Title }}</span>
+	</a>
+	{{- end }}
+</nav>
+{{- end }}
+{{- end }}

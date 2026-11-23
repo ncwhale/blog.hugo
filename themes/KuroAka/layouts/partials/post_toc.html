@@ -1,0 +1,10 @@
+{{- if .Param "toc" }}
+{{- if gt (len .TableOfContents) 32 }}
+<details class="article__toc toc" open>
+	<summary class="toc__title">{{ T "toc_title" }}</summary>
+	<div class="toc__menu">
+		{{ .TableOfContents }}
+	</div>
+</details>
+{{- end }}
+{{- end }}

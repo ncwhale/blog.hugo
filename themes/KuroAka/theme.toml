@@ -1,0 +1,8 @@
+name = "KuroAka"
+license = "MIT"
+description = "A sharp black-and-red, square-edged modern Hugo theme with HTMX partial navigation and zero-JS mobile menu."
+min_version = "0.141"
+
+[author]
+  name = "Whale Mo"
+  homepage = "https://koa.im"
