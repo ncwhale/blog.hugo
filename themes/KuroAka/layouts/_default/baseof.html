@@ -34,7 +34,8 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 
-	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+	<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
 	{{- if hugo.IsServer }}
 	<meta name="htmx-config" content='{"selfRequestsOnly": false}'>
 	{{- end }}
