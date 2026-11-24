@@ -7,9 +7,6 @@ pagination.pagerSize = 10
 hasCJKLanguage = true
 
 [services]
-  [services.disqus]
-    shortname = "kouga-us" # Enable comments by entering your Disqus shortname
-
   [services.googleAnalytics]
     id = 'G-0D75VYJTKG'
 
