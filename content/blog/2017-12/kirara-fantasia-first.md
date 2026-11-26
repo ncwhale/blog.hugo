@@ -3,6 +3,8 @@ title: "Kirara Fantasia 手游初始卡抽取"
 date: 2017-12-17T11:16:12+08:00
 lastmod: 2017-12-17T11:16:12+08:00
 draft: false
+categories: ["游戏与ACG"]
+tags: ["游戏", "手游"]
 isCJKLanguage: true
 ---
 

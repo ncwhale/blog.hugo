@@ -2,8 +2,8 @@
 title: "Postgresql Benchmark on barematel"
 date: 2023-10-25T11:17:42+09:00
 draft: true
-tags: []
-categories: []
+categories: ["技术"]
+tags: ["数据库", "Homelab"]
 isCJKLanguage: true
 toc:
   enable: true

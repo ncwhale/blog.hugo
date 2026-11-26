@@ -2,8 +2,8 @@
 title: "公主链接抽卡指南"
 date: 2021-08-19T14:06:33+09:00
 draft: false
-tags: ["公主链接", "抽卡"]
-categories: ["教程"]
+categories: ["游戏与ACG"]
+tags: ["游戏", "手游"]
 isCJKLanguage: true
 toc:
   enable: true

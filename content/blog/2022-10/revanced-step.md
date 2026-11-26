@@ -2,8 +2,8 @@
 title: "Revanced Step"
 date: 2022-10-21T23:40:52+09:00
 draft: false
-tags: ["Tool", "revanced", "youtube", "twitter", "spotify"]
-categories: ["Tool", "教程"]
+categories: ["技术"]
+tags: ["Android", "工具"]
 isCJKLanguage: true
 toc:
   enable: true

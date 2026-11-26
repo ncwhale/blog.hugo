@@ -3,6 +3,8 @@ title: "越来越讨厌《东说西说》了"
 date: 2007-04-29T13:54:34+08:00
 lastmod: 2007-04-29T13:54:34+08:00
 draft: false
+categories: ["日常"]
+tags: ["吐槽", "随笔"]
 isCJKLanguage: true
 ---
 

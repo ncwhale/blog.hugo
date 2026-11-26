@@ -2,8 +2,8 @@
 title: "编译一个支持Infiniband的OpenWRT固件"
 date: 2024-01-10T20:42:11+09:00
 draft: false
-tags: []
-categories: ["教程"]
+categories: ["技术"]
+tags: ["OpenWRT", "Linux", "网络", "Homelab"]
 isCJKLanguage: true
 toc:
   enable: true

@@ -3,6 +3,8 @@ title: "Kouga's Personal Blog 开站了"
 date: 2007-04-29T07:45:18+08:00
 lastmod: 2007-04-29T07:45:18+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "随笔"]
 isCJKLanguage: true
 ---
 

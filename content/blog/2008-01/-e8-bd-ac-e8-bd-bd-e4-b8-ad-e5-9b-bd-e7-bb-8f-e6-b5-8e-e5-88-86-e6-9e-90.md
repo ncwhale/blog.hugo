@@ -3,6 +3,8 @@ title: "[转载]中国经济分析"
 date: 2008-01-16T07:35:11+08:00
 lastmod: 2008-01-16T07:35:11+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["转载", "科普"]
 isCJKLanguage: true
 ---
 

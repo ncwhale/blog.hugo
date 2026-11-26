@@ -3,6 +3,8 @@ title: "赵公山游记(三)——继续即时填坑状态。"
 date: 2007-05-04T10:08:54+08:00
 lastmod: 2007-05-04T10:08:54+08:00
 draft: false
+categories: ["日常"]
+tags: ["游记"]
 isCJKLanguage: true
 ---
 

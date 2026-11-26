@@ -3,11 +3,9 @@ title: "How to fix broken SVP with New Nvidia Driver(378.66)"
 date: 2017-02-17T18:17:45+08:00
 lastmod: 2017-02-17T18:17:45+08:00
 draft: false
+categories: ["技术"]
+tags: ["音视频", "硬件", "踩坑"]
 isCJKLanguage: true
-tags:
-  - "howto"
-  - "nvidia"
-  - "SVP"
 ---
 
 1. Right click on your desktop, choose Nvidia Control Panel.

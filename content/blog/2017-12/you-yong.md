@@ -3,6 +3,8 @@ title: "游泳"
 date: 2017-12-26T03:18:08+08:00
 lastmod: 2017-12-26T03:18:08+08:00
 draft: true
+categories: ["创作"]
+tags: ["短篇"]
 isCJKLanguage: true
 ---
 

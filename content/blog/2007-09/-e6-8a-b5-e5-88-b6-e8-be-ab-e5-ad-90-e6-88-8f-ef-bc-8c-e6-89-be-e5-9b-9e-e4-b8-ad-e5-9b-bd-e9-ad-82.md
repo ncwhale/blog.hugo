@@ -3,6 +3,8 @@ title: "抵制辫子戏，找回中国魂"
 date: 2007-09-12T01:20:18+08:00
 lastmod: 2007-09-12T01:20:18+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["传统文化", "转载"]
 isCJKLanguage: true
 ---
 

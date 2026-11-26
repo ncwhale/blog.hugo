@@ -2,8 +2,8 @@
 title: "K8s Memo Tips"
 date: 2022-09-03T09:10:41+09:00
 draft: true
-tags: ["Tool", "Samba", "ZFS", "NFS"]
-categories: ["Tool", "教程"]
+categories: ["技术"]
+tags: ["Kubernetes", "Homelab", "运维"]
 isCJKLanguage: true
 toc:
   enable: true

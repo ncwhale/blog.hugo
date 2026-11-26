@@ -3,6 +3,8 @@ title: "今天要去和济南的同袍们交流"
 date: 2007-12-02T03:22:59+08:00
 lastmod: 2007-12-02T03:22:59+08:00
 draft: false
+categories: ["日常"]
+tags: ["汉服", "随笔"]
 isCJKLanguage: true
 ---
 

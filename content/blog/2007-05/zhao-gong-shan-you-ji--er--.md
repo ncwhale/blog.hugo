@@ -3,6 +3,8 @@ title: "赵公山游记(二)"
 date: 2007-05-03T13:50:19+08:00
 lastmod: 2007-05-03T13:50:19+08:00
 draft: false
+categories: ["日常"]
+tags: ["游记"]
 isCJKLanguage: true
 ---
 

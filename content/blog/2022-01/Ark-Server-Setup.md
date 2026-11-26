@@ -2,8 +2,8 @@
 title: "Ark Linux Server Setup"
 date: 2022-01-23T22:36:10+09:00
 draft: false
-tags: ["Linux", "Ark", "Server"]
-categories: ["Service"]
+categories: ["技术"]
+tags: ["Linux", "游戏", "Homelab"]
 isCJKLanguage: true
 toc:
   enable: true

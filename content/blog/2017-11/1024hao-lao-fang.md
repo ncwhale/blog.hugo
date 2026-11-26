@@ -3,6 +3,8 @@ title: "1024号牢房"
 date: 2017-11-27T15:23:02+08:00
 lastmod: 2017-11-27T15:23:02+08:00
 draft: false
+categories: ["创作"]
+tags: ["短篇"]
 isCJKLanguage: true
 ---
 

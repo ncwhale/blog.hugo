@@ -3,6 +3,8 @@ title: "使用ipfilter过滤GFW滴DNS污染喵~"
 date: 2012-08-27T13:46:43+08:00
 lastmod: 2012-08-27T13:46:43+08:00
 draft: false
+categories: ["技术"]
+tags: ["OpenWRT", "Linux", "网络"]
 isCJKLanguage: true
 ---
 

@@ -3,6 +3,8 @@ title: "Oh, my god!博客竟然草都长了这么深了喵！"
 date: 2010-08-18T17:16:14+08:00
 lastmod: 2010-08-18T17:16:14+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "随笔"]
 isCJKLanguage: true
 ---
 

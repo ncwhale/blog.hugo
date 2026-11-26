@@ -3,6 +3,8 @@ title: "要被微软虐成抖M了喵……"
 date: 2013-10-06T00:29:37+08:00
 lastmod: 2013-10-06T00:29:37+08:00
 draft: false
+categories: ["日常"]
+tags: ["硬件", "Windows", "吐槽"]
 isCJKLanguage: true
 ---
 

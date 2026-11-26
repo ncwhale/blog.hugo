@@ -3,6 +3,8 @@ title: "超坑爹滴KingMAX Class 10 16G TF卡"
 date: 2010-12-08T10:26:04+08:00
 lastmod: 2010-12-08T10:26:04+08:00
 draft: false
+categories: ["日常"]
+tags: ["硬件", "踩坑", "吐槽"]
 isCJKLanguage: true
 ---
 

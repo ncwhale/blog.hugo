@@ -2,8 +2,8 @@
 title: "2024 年终总结喵~"
 date: 2025-01-02T20:26:11+09:00
 draft: false
-tags: ["日常", "总结"]
 categories: ["日常"]
+tags: ["总结", "随笔"]
 isCJKLanguage: true
 toc:
   enable: true

@@ -3,6 +3,8 @@ title: "人民网调查——中国代表团入场穿什么？"
 date: 2007-08-08T09:38:55+08:00
 lastmod: 2007-08-08T09:38:55+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["汉服", "传统文化"]
 isCJKLanguage: true
 ---
 

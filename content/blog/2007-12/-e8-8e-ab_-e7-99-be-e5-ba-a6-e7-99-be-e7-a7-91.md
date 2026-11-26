@@ -3,6 +3,8 @@ title: "莫_百度百科"
 date: 2007-12-11T14:15:02+08:00
 lastmod: 2007-12-11T14:15:02+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["传统文化", "转载"]
 isCJKLanguage: true
 ---
 

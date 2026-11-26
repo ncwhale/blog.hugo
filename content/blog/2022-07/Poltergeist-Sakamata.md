@@ -2,8 +2,8 @@
 title: "沙花叉の家に騒霊が現象"
 date: 2022-07-18T23:11:36+09:00
 draft: false
-tags: ["VTuber", "Hololive", "Poltergeist", "Science"]
-categories: ["Science"]
+categories: ["游戏与ACG"]
+tags: ["VTuber", "科普"]
 isCJKLanguage: true
 toc:
   enable: true

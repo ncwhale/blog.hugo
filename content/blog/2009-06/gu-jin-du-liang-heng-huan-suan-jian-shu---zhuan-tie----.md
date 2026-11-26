@@ -3,6 +3,8 @@ title: "古今度量衡換算簡述【轉貼】"
 date: 2009-06-08T00:49:03+08:00
 lastmod: 2009-06-08T00:49:03+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["传统文化", "科普", "转载"]
 isCJKLanguage: true
 ---
 

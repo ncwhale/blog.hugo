@@ -3,6 +3,8 @@ title: "SQLite3 头文件注释翻译"
 date: 2007-07-20T02:45:04+08:00
 lastmod: 2007-07-20T02:45:04+08:00
 draft: false
+categories: ["技术"]
+tags: ["开发", "数据库"]
 isCJKLanguage: true
 ---
 

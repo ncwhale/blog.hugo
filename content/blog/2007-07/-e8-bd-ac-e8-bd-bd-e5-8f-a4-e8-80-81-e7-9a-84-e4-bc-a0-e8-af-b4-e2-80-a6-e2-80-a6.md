@@ -3,6 +3,8 @@ title: "[转载]古老的传说……"
 date: 2007-07-07T05:09:02+08:00
 lastmod: 2007-07-07T05:09:02+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["短篇", "转载"]
 isCJKLanguage: true
 ---
 

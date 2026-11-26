@@ -3,6 +3,8 @@ title: "OpenWRT 在 WR703n 和 WDR4310 上的安装\\升级备忘(上)"
 date: 2012-08-29T03:19:36+08:00
 lastmod: 2012-08-29T03:19:36+08:00
 draft: false
+categories: ["技术"]
+tags: ["OpenWRT", "网络", "硬件"]
 isCJKLanguage: true
 ---
 

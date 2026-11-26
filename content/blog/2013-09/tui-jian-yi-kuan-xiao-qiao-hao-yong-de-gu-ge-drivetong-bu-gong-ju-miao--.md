@@ -3,6 +3,8 @@ title: "推荐一款小巧好用的谷歌Drive同步工具喵/"
 date: 2013-09-29T13:24:30+08:00
 lastmod: 2013-09-29T13:24:30+08:00
 draft: false
+categories: ["技术"]
+tags: ["工具"]
 isCJKLanguage: true
 ---
 

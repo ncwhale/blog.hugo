@@ -3,6 +3,8 @@ title: "Android居然发布玩偶了！！！"
 date: 2010-02-03T11:07:28+08:00
 lastmod: 2010-02-03T11:07:28+08:00
 draft: false
+categories: ["日常"]
+tags: ["Android", "随笔"]
 isCJKLanguage: true
 ---
 

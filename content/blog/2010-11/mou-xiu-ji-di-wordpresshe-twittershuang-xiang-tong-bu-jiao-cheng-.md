@@ -3,6 +3,8 @@ title: "某⑨秀吉滴Wordpress和Twitter双向同步教程"
 date: 2010-11-28T09:24:06+08:00
 lastmod: 2010-11-28T09:24:06+08:00
 draft: false
+categories: ["技术"]
+tags: ["Blog", "WordPress", "社交网络"]
 isCJKLanguage: true
 ---
 

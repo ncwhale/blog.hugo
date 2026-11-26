@@ -3,6 +3,8 @@ title: "《夏日大作战》(《Summer Wars》)“科学滴尝试性解读”"
 date: 2010-03-17T00:03:51+08:00
 lastmod: 2010-03-17T00:03:51+08:00
 draft: true
+categories: ["游戏与ACG"]
+tags: ["动漫", "科普"]
 isCJKLanguage: true
 ---
 

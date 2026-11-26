@@ -3,6 +3,8 @@ title: "Green World 玩家进入指引"
 date: 2012-04-19T05:43:57+08:00
 lastmod: 2012-04-19T05:43:57+08:00
 draft: false
+categories: ["游戏与ACG"]
+tags: ["游戏", "Minecraft"]
 isCJKLanguage: true
 ---
 

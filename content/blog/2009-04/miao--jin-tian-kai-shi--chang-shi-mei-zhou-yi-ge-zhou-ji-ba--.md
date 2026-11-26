@@ -3,6 +3,8 @@ title: "喵~今天开始，尝试每周一个周记吧~"
 date: 2009-04-10T13:36:52+08:00
 lastmod: 2009-04-10T13:36:52+08:00
 draft: false
+categories: ["日常"]
+tags: ["随笔", "动漫"]
 isCJKLanguage: true
 ---
 

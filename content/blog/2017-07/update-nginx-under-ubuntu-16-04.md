@@ -3,6 +3,8 @@ title: "Update nginx under ubuntu 16.04"
 date: 2017-07-15T03:00:06+08:00
 lastmod: 2017-07-15T03:00:06+08:00
 draft: false
+categories: ["技术"]
+tags: ["Linux", "Nginx", "运维"]
 isCJKLanguage: true
 ---
 

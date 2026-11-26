@@ -3,6 +3,8 @@ title: "总结一下~"
 date: 2008-10-11T17:21:43+08:00
 lastmod: 2008-10-11T17:21:43+08:00
 draft: true
+categories: ["日常"]
+tags: ["总结", "随笔"]
 isCJKLanguage: true
 ---
 

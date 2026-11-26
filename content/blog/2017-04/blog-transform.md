@@ -3,6 +3,8 @@ title: "博客迁移，灰度发布中喵~"
 date: 2017-04-05T16:51:00+08:00
 lastmod: 2017-04-05T16:51:00+08:00
 draft: false
+categories: ["技术"]
+tags: ["Blog", "运维"]
 isCJKLanguage: true
 ---
 

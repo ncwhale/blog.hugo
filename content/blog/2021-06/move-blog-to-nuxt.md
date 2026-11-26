@@ -1,8 +1,8 @@
 ---
 title: 使用 Nuxt.js 静态构建 Blog
 date: 2021-06-04T08:09:15+09:00
-tags: ["Nuxt", "Blog", "教程"]
-categories: ["教程"]
+categories: ["技术"]
+tags: ["Blog", "Node.js"]
 isCJKLanguage: true
 toc:
   enable: true

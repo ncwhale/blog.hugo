@@ -3,6 +3,8 @@ title: "新窝初步建设完毕！"
 date: 2010-02-01T15:48:19+08:00
 lastmod: 2010-02-01T15:48:19+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "WordPress", "随笔"]
 isCJKLanguage: true
 ---
 

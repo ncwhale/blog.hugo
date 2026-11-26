@@ -3,6 +3,8 @@ title: "[轉帖]强大得让人望而生畏的耽美作品的链接"
 date: 2008-08-20T03:33:24+08:00
 lastmod: 2008-08-20T03:33:24+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["同人", "转载"]
 isCJKLanguage: true
 ---
 

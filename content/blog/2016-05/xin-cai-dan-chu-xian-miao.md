@@ -3,9 +3,9 @@ title: "新菜单出现喵~"
 date: 2016-05-22T06:23:56+08:00
 lastmod: 2016-05-22T06:23:56+08:00
 draft: false
+categories: ["日常"]
+tags: ["菜谱"]
 isCJKLanguage: true
-tags:
-  - "黑料"
 ---
 
 因为看到苏宁打折所以998买了飞利浦的空气炸锅喵~昨天下单今天就送到啦喵~

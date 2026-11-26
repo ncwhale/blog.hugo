@@ -3,6 +3,8 @@ title: "MSN上面的汉服群！"
 date: 2007-12-01T10:12:22+08:00
 lastmod: 2007-12-01T10:12:22+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["汉服", "社交网络"]
 isCJKLanguage: true
 ---
 

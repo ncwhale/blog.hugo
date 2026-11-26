@@ -3,10 +3,9 @@ title: "论梯子的失效和修复（喂～"
 date: 2016-05-11T14:29:06+08:00
 lastmod: 2016-05-11T14:29:06+08:00
 draft: false
+categories: ["技术"]
+tags: ["Linux", "网络", "踩坑"]
 isCJKLanguage: true
-tags:
-  - "入门"
-  - "坑"
 ---
 
 过去一年依赖的服务最近几天突然遭遇机房DDOS（中国现状，叹气），导致连续好几个小时无法连接……

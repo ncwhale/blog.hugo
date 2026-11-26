@@ -2,8 +2,8 @@
 title: "给 Hugo 支持的静态博客添加 HTMX 支持"
 date: 2024-01-10T20:42:11+09:00
 draft: false
-tags: []
-categories: ["教程"]
+categories: ["技术"]
+tags: ["Blog", "Hugo", "开发"]
 isCJKLanguage: true
 toc:
   enable: true

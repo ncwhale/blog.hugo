@@ -3,9 +3,9 @@ title: "Howto: PostgreSQL 查询分析和优化"
 date: 2016-05-14T17:03:58+08:00
 lastmod: 2016-05-14T17:03:58+08:00
 draft: false
+categories: ["技术"]
+tags: ["数据库", "运维"]
 isCJKLanguage: true
-tags:
-  - "入门"
 ---
 
 故事开始：公司的服务在周末高峰期，跪了喵……

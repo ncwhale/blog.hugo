@@ -3,6 +3,8 @@ title: "[转载]历史上曾经创造过回复超过5000帖的最欠扁老帖"
 date: 2007-07-10T13:03:31+08:00
 lastmod: 2007-07-10T13:03:31+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["转载", "吐槽"]
 isCJKLanguage: true
 ---
 

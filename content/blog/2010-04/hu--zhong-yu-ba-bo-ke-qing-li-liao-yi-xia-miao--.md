@@ -3,6 +3,8 @@ title: "呼~终于把博客清理了一下喵~"
 date: 2010-04-28T02:31:32+08:00
 lastmod: 2010-04-28T02:31:32+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "WordPress", "社交网络"]
 isCJKLanguage: true
 ---
 

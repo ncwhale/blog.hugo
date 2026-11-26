@@ -3,6 +3,8 @@ title: "从 WordPress 到 Ghost 喵~"
 date: 2016-04-27T17:18:47+08:00
 lastmod: 2016-04-27T17:18:47+08:00
 draft: false
+categories: ["技术"]
+tags: ["Blog", "WordPress", "Ghost"]
 isCJKLanguage: true
 ---
 

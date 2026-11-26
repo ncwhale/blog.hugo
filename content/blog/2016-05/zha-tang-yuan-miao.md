@@ -3,6 +3,8 @@ title: "炸汤圆喵~"
 date: 2016-05-28T15:15:43+08:00
 lastmod: 2016-05-28T15:15:43+08:00
 draft: false
+categories: ["日常"]
+tags: ["菜谱"]
 isCJKLanguage: true
 ---
 

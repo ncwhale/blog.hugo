@@ -3,6 +3,8 @@ title: "WallOP,我来也~"
 date: 2007-06-01T07:13:19+08:00
 lastmod: 2007-06-01T07:13:19+08:00
 draft: false
+categories: ["技术"]
+tags: ["Windows", "工具", "社交网络"]
 isCJKLanguage: true
 ---
 

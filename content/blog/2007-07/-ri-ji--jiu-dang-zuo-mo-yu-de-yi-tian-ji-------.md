@@ -3,6 +3,8 @@ title: "[日记]就当作摸鱼的一天记……"
 date: 2007-07-18T12:14:17+08:00
 lastmod: 2007-07-18T12:14:17+08:00
 draft: false
+categories: ["日常"]
+tags: ["工作", "随笔"]
 isCJKLanguage: true
 ---
 

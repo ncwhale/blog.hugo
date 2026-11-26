@@ -3,6 +3,8 @@ title: "小骡子专用机郁闷滴被攻击到死机了！"
 date: 2010-05-09T14:45:34+08:00
 lastmod: 2010-05-09T14:45:34+08:00
 draft: false
+categories: ["技术"]
+tags: ["网络", "Linux", "踩坑"]
 isCJKLanguage: true
 ---
 

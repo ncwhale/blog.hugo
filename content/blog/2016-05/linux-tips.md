@@ -3,9 +3,9 @@ title: "Linux tips"
 date: 2016-05-10T08:07:05+08:00
 lastmod: 2016-05-10T08:07:05+08:00
 draft: true
+categories: ["技术"]
+tags: ["Linux", "Shell", "工具"]
 isCJKLanguage: true
-tags:
-  - "入门"
 ---
 
 * zsh提示命令对应软件包

@@ -2,8 +2,8 @@
 title: "2023自制贺年明信片"
 date: 2023-10-27T23:17:42+09:00
 draft: false
-tags: []
-categories: []
+categories: ["日常"]
+tags: ["摄影", "总结"]
 isCJKLanguage: true
 toc:
   enable: true

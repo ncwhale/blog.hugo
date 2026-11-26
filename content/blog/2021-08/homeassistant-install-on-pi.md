@@ -2,8 +2,8 @@
 title: 树莓派上安装 Homeassistant 备忘
 draft: false
 date: 2021-08-12T17:40:15+09:00
-tags: ["教程", "homeassistant", "Arch"]
-categories: ["教程"]
+categories: ["技术"]
+tags: ["Linux", "Homelab", "运维"]
 isCJKLanguage: true
 toc:
   enable: true

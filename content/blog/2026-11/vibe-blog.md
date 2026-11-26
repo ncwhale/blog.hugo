@@ -2,8 +2,8 @@
 title: 'Vibe Blog'
 date: 2026-11-23T14:02:38+09:00
 draft: false
-tags: ["教程", "工具", "BLOG", "VIBE"]
-categories: ["Tool"]
+categories: ["技术"]
+tags: ["Blog", "Hugo", "开发", "AI"]
 isCJKLanguage: true
 toc:
   enable: true

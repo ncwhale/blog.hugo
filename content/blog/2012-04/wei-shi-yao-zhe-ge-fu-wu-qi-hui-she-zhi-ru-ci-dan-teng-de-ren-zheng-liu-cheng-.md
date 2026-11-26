@@ -3,9 +3,9 @@ title: "为什么这个服务器会设置如此蛋疼的认证流程"
 date: 2012-04-25T04:07:57+08:00
 lastmod: 2012-04-25T04:07:57+08:00
 draft: false
+categories: ["游戏与ACG"]
+tags: ["游戏", "Minecraft", "吐槽"]
 isCJKLanguage: true
-tags:
-  - "游戏"
 ---
 
 <p>咱不做任何评论喵。</p>  <p>服务器日志：

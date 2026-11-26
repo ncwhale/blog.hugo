@@ -1,9 +1,9 @@
 ---
 title: "将 Ghost 存储的博文导入到 Hugo 中"
 date: 2021-06-22T02:31:40+09:00
-tags: ["Tool", "Code", "Hugo", "Blog", "Ghost"]
-categories: ["Tool"]
 draft: false
+categories: ["技术"]
+tags: ["Blog", "Hugo", "Ghost", "Node.js"]
 isCJKLanguage: true
 ---
 

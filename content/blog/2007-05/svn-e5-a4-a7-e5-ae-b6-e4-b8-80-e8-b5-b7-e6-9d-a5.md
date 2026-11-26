@@ -3,6 +3,8 @@ title: "SVN:大家一起来~"
 date: 2007-05-27T13:52:30+08:00
 lastmod: 2007-05-27T13:52:30+08:00
 draft: false
+categories: ["技术"]
+tags: ["Linux", "开发", "工具"]
 isCJKLanguage: true
 ---
 

@@ -3,6 +3,8 @@ title: "[更新!]同人文辞典——从故纸堆里检索出来更新一下~"
 date: 2008-04-21T08:23:57+08:00
 lastmod: 2008-04-21T08:23:57+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["同人", "动漫"]
 isCJKLanguage: true
 ---
 

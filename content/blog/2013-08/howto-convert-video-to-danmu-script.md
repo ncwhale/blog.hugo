@@ -3,9 +3,9 @@ title: "Howto:将BA转换成弹幕视频"
 date: 2013-08-21T15:46:17+08:00
 lastmod: 2013-08-21T15:46:17+08:00
 draft: false
+categories: ["技术"]
+tags: ["音视频", "工具", "踩坑"]
 isCJKLanguage: true
-tags:
-  - "坑"
 ---
 
 所需工具

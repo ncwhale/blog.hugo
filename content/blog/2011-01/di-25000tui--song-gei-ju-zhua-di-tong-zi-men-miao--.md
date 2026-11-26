@@ -3,6 +3,8 @@ title: "第25000推，送给举爪滴筒子们喵~"
 date: 2011-01-03T03:19:12+08:00
 lastmod: 2011-01-03T03:19:12+08:00
 draft: false
+categories: ["日常"]
+tags: ["社交网络", "随笔"]
 isCJKLanguage: true
 ---
 

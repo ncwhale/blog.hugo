@@ -3,6 +3,8 @@ title: "Browser Info Test"
 date: 2017-03-21T06:06:15+08:00
 lastmod: 2017-03-21T06:06:15+08:00
 draft: false
+categories: ["技术"]
+tags: ["开发", "工具"]
 isCJKLanguage: true
 ---
 

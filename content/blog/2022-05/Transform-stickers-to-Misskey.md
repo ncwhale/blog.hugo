@@ -2,8 +2,8 @@
 title: "Transform Stickers to Misskey"
 date: 2022-05-02T00:34:00+09:00
 draft: false
-tags: ["Misskey", "PowerShell", "ffmpeg"]
-categories: ["Tool"]
+categories: ["技术"]
+tags: ["Shell", "Windows", "音视频", "社交网络"]
 isCJKLanguage: true
 toc:
   enable: true

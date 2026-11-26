@@ -3,6 +3,8 @@ title: "Ghost 空间整理中喵～"
 date: 2016-04-27T03:25:22+08:00
 lastmod: 2016-04-27T03:25:22+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "Ghost"]
 isCJKLanguage: true
 ---
 

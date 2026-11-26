@@ -2,8 +2,8 @@
 title: "Zfs Tips"
 date: 2022-08-11T12:34:52+09:00
 draft: false
-tags: ["Tool", "Samba", "ZFS", "NFS"]
-categories: ["Tool", "教程"]
+categories: ["技术"]
+tags: ["Linux", "Homelab", "运维"]
 isCJKLanguage: true
 toc:
   enable: true

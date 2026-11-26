@@ -3,6 +3,8 @@ title: "五一杂乱记录（尝试用小石头更新博客喵~"
 date: 2010-05-04T04:45:28+08:00
 lastmod: 2010-05-04T04:45:28+08:00
 draft: false
+categories: ["日常"]
+tags: ["Android", "随笔"]
 isCJKLanguage: true
 ---
 

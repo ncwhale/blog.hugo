@@ -3,9 +3,9 @@ title: "简单解决WordPress遗留下来的图片问题喵～"
 date: 2016-05-06T14:10:34+08:00
 lastmod: 2016-05-06T14:10:34+08:00
 draft: false
+categories: ["技术"]
+tags: ["Blog", "WordPress", "Nginx"]
 isCJKLanguage: true
-tags:
-  - "入门"
 ---
 
 由于将博客系统迁移到EC2上了，发现[之前一些博文](https://kouga.us/tui-jian-yi-kuan-xiao-qiao-hao-yong-de-gu-ge-drivetong-bu-gong-ju-miao--/)里面的图片都跪了喵～ ~~因为当时懒直接用了WordPress的上传~~

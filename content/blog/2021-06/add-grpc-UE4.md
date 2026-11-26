@@ -2,6 +2,8 @@
 title: "Add Grpc UE4"
 date: 2021-06-28T14:45:25+09:00
 draft: true
+categories: ["技术"]
+tags: ["游戏", "开发"]
 ---
 
 ## 前置需求

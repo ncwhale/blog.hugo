@@ -2,8 +2,8 @@
 title: "Byobu Tmux Tips"
 date: 2022-01-08T17:43:20+09:00
 draft: true
-tags: ["Linux", "Shell", "Tmux"]
-categories: ["Tool"]
+categories: ["技术"]
+tags: ["Linux", "Shell", "工具"]
 isCJKLanguage: true
 toc:
   enable: true

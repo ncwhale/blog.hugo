@@ -3,6 +3,8 @@ title: "Google 的浏览器！！"
 date: 2008-09-03T12:58:16+08:00
 lastmod: 2008-09-03T12:58:16+08:00
 draft: false
+categories: ["技术"]
+tags: ["工具", "Windows"]
 isCJKLanguage: true
 ---
 

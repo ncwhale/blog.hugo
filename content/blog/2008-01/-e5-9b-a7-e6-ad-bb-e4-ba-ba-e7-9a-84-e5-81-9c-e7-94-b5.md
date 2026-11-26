@@ -3,6 +3,8 @@ title: "囧死人的停电"
 date: 2008-01-16T07:52:18+08:00
 lastmod: 2008-01-16T07:52:18+08:00
 draft: false
+categories: ["日常"]
+tags: ["工作", "吐槽"]
 isCJKLanguage: true
 ---
 

@@ -3,6 +3,8 @@ title: "在现代社会提倡读经之基本理论"
 date: 2007-12-23T03:36:15+08:00
 lastmod: 2007-12-23T03:36:15+08:00
 draft: false
+categories: ["收藏与杂谈"]
+tags: ["传统文化", "转载"]
 isCJKLanguage: true
 ---
 

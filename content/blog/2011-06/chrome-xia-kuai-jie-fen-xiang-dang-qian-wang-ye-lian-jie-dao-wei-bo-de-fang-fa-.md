@@ -3,6 +3,8 @@ title: "Chrome 下快捷分享当前网页链接到微博的方法"
 date: 2011-06-01T11:20:14+08:00
 lastmod: 2011-06-01T11:20:14+08:00
 draft: false
+categories: ["技术"]
+tags: ["工具", "社交网络"]
 isCJKLanguage: true
 ---
 

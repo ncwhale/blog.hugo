@@ -3,6 +3,8 @@ title: "博客维护日志"
 date: 2010-02-03T07:04:02+08:00
 lastmod: 2010-02-03T07:04:02+08:00
 draft: false
+categories: ["技术"]
+tags: ["Blog", "WordPress"]
 isCJKLanguage: true
 ---
 

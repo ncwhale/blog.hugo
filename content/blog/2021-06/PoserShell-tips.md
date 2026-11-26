@@ -1,9 +1,9 @@
 ---
 title: "PoserShell Tips"
 date: 2021-06-30T05:01:40+09:00
-tags: ["Tool", "Code", "PowerShell", "scoop"]
-categories: ["Tool"]
 draft: false
+categories: ["技术"]
+tags: ["Shell", "Windows", "工具"]
 isCJKLanguage: true
 thumbnail: "https://i.imgur.com/WGkVDwL.png"
 ---

@@ -3,6 +3,8 @@ title: "Kouga’s blog › 创建新文章 — WordPress"
 date: 2007-04-28T06:05:55+08:00
 lastmod: 2007-04-28T06:05:55+08:00
 draft: false
+categories: ["日常"]
+tags: ["Blog", "WordPress", "随笔"]
 isCJKLanguage: true
 ---
 

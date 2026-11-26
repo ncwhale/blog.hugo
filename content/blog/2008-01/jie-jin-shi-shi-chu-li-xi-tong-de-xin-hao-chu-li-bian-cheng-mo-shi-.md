@@ -3,6 +3,8 @@ title: "接近实时处理系统的信号处理编程模式"
 date: 2008-01-25T06:51:41+08:00
 lastmod: 2008-01-25T06:51:41+08:00
 draft: false
+categories: ["技术"]
+tags: ["开发"]
 isCJKLanguage: true
 ---
 

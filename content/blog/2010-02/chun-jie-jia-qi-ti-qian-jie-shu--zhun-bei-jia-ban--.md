@@ -3,6 +3,8 @@ title: "春节假期提前结束~准备加班！"
 date: 2010-02-21T12:56:13+08:00
 lastmod: 2010-02-21T12:56:13+08:00
 draft: false
+categories: ["日常"]
+tags: ["工作", "社交网络", "随笔"]
 isCJKLanguage: true
 ---
 

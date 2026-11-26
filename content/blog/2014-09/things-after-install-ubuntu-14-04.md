@@ -3,9 +3,9 @@ title: "Things after install ubuntu 14.04"
 date: 2014-09-02T16:18:01+08:00
 lastmod: 2014-09-02T16:18:01+08:00
 draft: false
+categories: ["技术"]
+tags: ["Linux", "运维", "开发"]
 isCJKLanguage: true
-tags:
-  - "入门"
 ---
 
 备忘用喵～因为最近装了太多Ubuntu 14.04 手略发麻喵……

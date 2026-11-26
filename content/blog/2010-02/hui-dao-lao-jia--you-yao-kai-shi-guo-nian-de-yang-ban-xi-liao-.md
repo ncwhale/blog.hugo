@@ -3,6 +3,8 @@ title: "回到老家，又要开始过年的样板戏了"
 date: 2010-02-12T12:13:25+08:00
 lastmod: 2010-02-12T12:13:25+08:00
 draft: false
+categories: ["日常"]
+tags: ["随笔", "吐槽"]
 isCJKLanguage: true
 ---
 

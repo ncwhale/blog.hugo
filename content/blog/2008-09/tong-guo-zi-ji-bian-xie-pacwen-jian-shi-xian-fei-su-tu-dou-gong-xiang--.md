@@ -3,6 +3,8 @@ title: "通过自己编写PAC文件实现飞速土豆共享~"
 date: 2008-09-03T14:54:37+08:00
 lastmod: 2008-09-03T14:54:37+08:00
 draft: false
+categories: ["技术"]
+tags: ["网络", "工具"]
 isCJKLanguage: true
 ---
 
