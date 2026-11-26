@@ -7,19 +7,21 @@
 	{{- $logoMix := and $logoImage $logoTitle -}}
 	<div class="site-banner{{ if $bannerImage }} site-banner--has-bg{{ end }}{{ if $logoMix }} site-banner--mixed{{ end }}">
 		<a class="site-banner__link" href="{{ "" | relLangURL }}"{{ with $logoTitle }} title="{{ . }}"{{ end }} rel="home">
-			{{- with $logoImage }}
-			<div class="site-banner__imgbox">
-				<img class="site-banner__img" src="{{ . | relURL }}" alt="{{ $logoTitle }}">
-			</div>
-			{{- end }}
-			{{- with $logoTitle }}
-			<div class="site-banner__text">
-				<span class="site-banner__title">{{ . }}</span>
-				{{- with $logoSubtitle }}
-				<span class="site-banner__subtitle">{{ . }}</span>
+			<div class="site-container site-banner__inner">
+				{{- with $logoImage }}
+				<div class="site-banner__imgbox">
+					<img class="site-banner__img" src="{{ . | relURL }}" alt="{{ $logoTitle }}">
+				</div>
+				{{- end }}
+				{{- with $logoTitle }}
+				<div class="site-banner__text">
+					<span class="site-banner__title">{{ . }}</span>
+					{{- with $logoSubtitle }}
+					<span class="site-banner__subtitle">{{ . }}</span>
+					{{- end }}
+				</div>
 				{{- end }}
 			</div>
-			{{- end }}
 		</a>
 	</div>
 {{- end }}

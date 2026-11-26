@@ -1,17 +1,19 @@
 {{- if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 <nav class="pagination" aria-label="{{ T "aria_pagination" }}">
 	{{- if .Paginator.HasPrev }}
-	<a class="pagination__item pagination__item--prev btn" href="{{ .Paginator.Prev.URL }}" rel="prev">&laquo;</a>
+	<a class="pagination__item pagination__item--prev" href="{{ .Paginator.Prev.URL }}" rel="prev" aria-label="{{ T "post_nav_prev" }}">&laquo;</a>
 	{{- else }}
-	<span class="pagination__item pagination__item--disabled">&laquo;</span>
+	<span class="pagination__item pagination__item--disabled" aria-hidden="true">&laquo;</span>
 	{{- end }}
 	<span class="pagination__item pagination__item--current">
-		{{- .Paginator.PageNumber }} / {{ .Paginator.TotalPages -}}
+		<span class="pagination__current-num">{{ .Paginator.PageNumber }}</span>
+		<span aria-hidden="true">/</span>
+		<span>{{ .Paginator.TotalPages }}</span>
 	</span>
 	{{- if .Paginator.HasNext }}
-	<a class="pagination__item pagination__item--next btn" href="{{ .Paginator.Next.URL }}" rel="next">&raquo;</a>
+	<a class="pagination__item pagination__item--next" href="{{ .Paginator.Next.URL }}" rel="next" aria-label="{{ T "post_nav_next" }}">&raquo;</a>
 	{{- else }}
-	<span class="pagination__item pagination__item--disabled">&raquo;</span>
+	<span class="pagination__item pagination__item--disabled" aria-hidden="true">&raquo;</span>
 	{{- end }}
 </nav>
 {{- end }}

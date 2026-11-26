@@ -5,8 +5,8 @@
 	<div class="widget__content widget-taglist__grid">
 	{{- range $name, $taxonomy := $tags }}
 		{{- with $.Site.GetPage (printf "/tags/%s" $name) }}
-		<a class="widget-taglist__link btn" href="{{ .RelPermalink }}" title="{{ .Title }}">
-			{{- .Title -}}{{- if .Site.Params.widgets.tags_counter }} <span class="widget-taglist__count">({{ $taxonomy.Count }})</span>{{ end -}}
+		<a class="widget-taglist__link" href="{{ .RelPermalink }}" title="{{ .Title }}">
+			#{{- .Title -}}{{- if .Site.Params.widgets.tags_counter }}<span class="widget-taglist__count">{{ $taxonomy.Count }}</span>{{ end -}}
 		</a>
 		{{- end }}
 	{{- end }}

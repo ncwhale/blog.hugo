@@ -15,11 +15,10 @@
 		{{ template "_internal/twitter_cards.html" . }}
 	{{- end }}
 
-	{{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" }}
+	{{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" }}
 	{{- if hasPrefix $googleFontsLink "https://fonts.googleapis.com/" }}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" {{ printf `href="%s"` $googleFontsLink | safeHTMLAttr }}>
 	{{- end }}
 
@@ -50,27 +49,27 @@
 </head>
 <body class="site-canvas">
 	<div id="hx-nav-progress" class="hx-progress" aria-hidden="true"></div>
-	<div class="site-frame">
+	{{- $sidebar := false -}}
+	{{- if eq .Kind "home" -}}
+		{{- $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) -}}
+	{{- else if eq .Kind "page" -}}
+		{{- $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) -}}
+	{{- else -}}
+		{{- $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) -}}
+	{{- end -}}
+	<div id="app-shell"
+	     class="site-shell"
+	     hx-history-elt
+	     hx-boost="true"
+	     hx-target="#app-content"
+	     hx-select="#app-content"
+	     hx-select-oob="#site-nav"
+	     hx-swap="outerHTML show:window:top"
+	     hx-indicator="#hx-nav-progress">
+		{{ partial "menu.html" . }}
 		{{ partial "header.html" . }}
-		{{- $sidebar := false -}}
-		{{- if eq .Kind "home" -}}
-			{{- $sidebar = (default .Site.Params.sidebar.home .Params.sidebar) -}}
-		{{- else if eq .Kind "page" -}}
-			{{- $sidebar = (default .Site.Params.sidebar.single .Params.sidebar) -}}
-		{{- else -}}
-			{{- $sidebar = (default .Site.Params.sidebar.list .Params.sidebar) -}}
-		{{- end -}}
-		<div id="app-shell"
-		     class="site-shell"
-		     hx-history-elt
-		     hx-boost="true"
-		     hx-target="#app-content"
-		     hx-select="#app-content"
-		     hx-select-oob="#site-nav"
-		     hx-swap="outerHTML show:window:top"
-		     hx-indicator="#hx-nav-progress">
-			{{ partial "menu.html" . }}
-			<div id="app-content" class="site-body{{ if $sidebar }} site-body--with-sidebar{{ if eq $sidebar "left" }} site-body--sidebar-left{{ end }}{{ end }}">
+		<div id="app-content" class="site-body{{ if $sidebar }} site-body--with-sidebar{{ if eq $sidebar "left" }} site-body--sidebar-left{{ end }}{{ end }}">
+			<div class="site-container site-body__grid">
 				<div class="site-primary">
 					{{ block "main" . }}
 						{{ with .Content }}
@@ -83,8 +82,8 @@
 				{{ partial "sidebar.html" . }}
 			</div>
 		</div>
-		{{ partial "footer.html" . }}
 	</div>
+	{{ partial "footer.html" . }}
 	{{- range .Site.Params.customJS }}
 	<script src="{{ . | relURL }}"></script>
 	{{- end }}

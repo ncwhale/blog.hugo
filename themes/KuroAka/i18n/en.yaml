@@ -38,14 +38,14 @@
 
 # Sidebar
 - id: sidebar_warning
-  translation: "WARNING"
+  translation: "Warning"
 
 - id: sidebar_recommendation
   translation: "Please activate at least one sidebar widget."
 
 # Search widget
 - id: search_placeholder
-  translation: "SEARCH…"
+  translation: "Search…"
 
 - id: search_submit
   translation: "Search"

@@ -1,33 +1,34 @@
-{{- if .Site.Menus.main }}
 <nav id="site-nav" class="site-nav" aria-label="{{ T "menu_label" }}">
 	<input type="checkbox" id="nav-toggle" class="site-nav__toggle" aria-hidden="true">
-	<div class="site-nav__bar">
-		<a class="site-nav__home" href="{{ "" | relLangURL }}">{{ .Site.Title }}</a>
+	<div class="site-container site-nav__inner">
+		<a class="site-nav__home" href="{{ "" | relLangURL }}" rel="home">
+			<span class="site-nav__mark" aria-hidden="true"></span>
+			<span class="site-nav__brand">{{ .Site.Title }}</span>
+		</a>
+		{{- if .Site.Menus.main }}
 		<label for="nav-toggle" class="site-nav__btn" role="button" tabindex="0" aria-controls="site-nav-list">
 			<span class="site-nav__btn-label">{{ T "menu_label" }}</span>
 			<span class="site-nav__hamburger" aria-hidden="true">
 				<span></span><span></span><span></span>
 			</span>
 		</label>
-	</div>
-	<div id="site-nav-list" class="site-nav__drawer">
-		<ul class="site-nav__list">
-			{{- $currentNode := . }}
-			{{- range .Site.Menus.main }}
-			{{- if .Name }}
-			{{- $active := or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) -}}
-			<li class="site-nav__item{{ if $active }} site-nav__item--active{{ end }}">
-				<a class="site-nav__link" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
-					{{ .Pre }}
-					<span>{{ .Name }}</span>
-					{{ .Post }}
-				</a>
-			</li>
-			{{- end }}
-			{{- end }}
-		</ul>
+		<div id="site-nav-list" class="site-nav__drawer">
+			<ul class="site-nav__list">
+				{{- $currentNode := . }}
+				{{- range .Site.Menus.main }}
+				{{- if .Name }}
+				{{- $active := or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) -}}
+				<li class="site-nav__item{{ if $active }} site-nav__item--active{{ end }}">
+					<a class="site-nav__link" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
+						{{ .Pre }}
+						<span>{{ .Name }}</span>
+						{{ .Post }}
+					</a>
+				</li>
+				{{- end }}
+				{{- end }}
+			</ul>
+		</div>
+		{{- end }}
 	</div>
 </nav>
-{{- else }}
-<div id="site-nav" class="site-divider"></div>
-{{- end }}
